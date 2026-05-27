@@ -1,10 +1,10 @@
 import { createApp } from 'vue'
+
 import { createPinia } from 'pinia'
 
-import 'bootstrap/dist/css/bootstrap.css'
-import 'bootstrap/dist/js/bootstrap.bundle.js'
-
 import '@/assets/styles/main.scss'
+
+import 'bootstrap/dist/js/bootstrap.bundle.js'
 
 import App from '@/App.vue'
 import router from '@/router/index.js'
