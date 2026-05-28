@@ -1,7 +1,6 @@
 @import "bootstrap/scss/functions";
 
 @import "./scss/variables";
-@import "./scss/custom-bootstrap";
 
 @import "bootstrap/scss/variables";
 @import "bootstrap/scss/variables-dark";
@@ -12,4 +11,6 @@
 @import "bootstrap/scss/bootstrap";
 
 @import "./scss/typography";
+@import "./scss/utils";
+@import "./scss/ui";
 @import "./scss/animations";
