@@ -15,18 +15,6 @@ export const usePetsStore = defineStore('pets', () => {
 
     }
 
-    const getPet = async (id) => {
-
-        const response = await fetch('/data/pets/pets.json')
-
-        const data = await response.json()
-
-        pets.value = data
-
-        return pets.value.find(item => item.id === Number(id));
-
-    }
-
     const adoptPet = (id) => {
 
         const pet = pets.value.find(c => c.id === id)
@@ -48,7 +36,6 @@ export const usePetsStore = defineStore('pets', () => {
     return {
         pets,
         getPets,
-        getPet,
         adoptPet,
         adoptedCount
     }
