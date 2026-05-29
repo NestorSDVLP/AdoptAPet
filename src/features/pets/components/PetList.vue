@@ -2,7 +2,7 @@
 
     <div class="row g-4">
 
-        <div v-for="pet in petsStore.pets" :key="pet.id" class="col-sm-6">
+        <div v-for="pet in petsStore.pets" :key="pet.id" :id="pet.id" class="col-sm-6">
             
             <PetCard
                 :id="pet.id"

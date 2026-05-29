@@ -1,26 +1,24 @@
 <template>
-    <Transition name="fade" mode="out-in">
     
-        <section class="py-5">
-            <div class="container">
-                <h1>Gatitos y Perritos</h1>
-                <hr class="mb-4">
-                <div class="row g-4">
-                    <div class="col-3">
+    <section class="py-5">
+        <div class="container">
+            <h1>Refugio</h1>
+            <hr class="mb-4">
+            <div class="row g-4">
+                <div class="col-3">
 
-                        <PetFilters/>
-                        
-                    </div>
-                    <div class="col-9">
+                    <PetFilters/>
+                    
+                </div>
+                <div class="col-9">
 
-                        <PetList/>
+                    <PetList/>
 
-                    </div>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-    </Transition>
 </template>
 
 <script setup>

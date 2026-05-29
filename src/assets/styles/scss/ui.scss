@@ -1,12 +1,39 @@
 .list-group {
     &.list-has-chevron {
-        position: relative;
+        .list-group-item-action {
+            position: relative;
 
-        .bi-chevron-right {
-            position: absolute;
-            right: 15px;
-            top: 50%;
-            transform: translateY(-50%);
+            .bi-chevron-right {
+                position: absolute;
+                right: 20px;
+                top: 50%;
+                transform: translateY(-50%);
+                transition: .25s ease-in-out;
+            }
+
+            &:hover {
+                .bi-chevron-right {
+                    transform: translate(5px,-50%);
+                }   
+            }
         }
+    }
+}
+
+.btn {
+    position: relative;
+
+    .bi-chevron-right {
+        position: absolute;
+        right: 20px;
+        top: 50%;
+        transform: translateY(-50%);
+        transition: .25s ease-in-out;
+    }
+
+    &:hover {
+        .bi-chevron-right {
+            transform: translate(5px,-50%);
+        }   
     }
 }

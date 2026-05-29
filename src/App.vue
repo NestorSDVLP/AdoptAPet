@@ -4,7 +4,7 @@
     <div class="container">
       <nav class="navbar navbar-expand-lg px-0">
         <a class="navbar-brand text-dark" href="/">
-          <h1 class="h2 m-0">Adopt a Pet</h1>
+          <h1 class="h2 m-0">Adopt a Pet&reg;</h1>
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
         <span class="navbar-toggler-icon"></span>
@@ -15,12 +15,12 @@
               <router-link class="nav-link text-dark active" to="/">Home</router-link>
             </li>
             <li class="nav-item">
-              <router-link class="nav-link text-dark" to="/pets">Gatitos y Perritos</router-link>
+              <router-link class="nav-link text-dark" to="/pets">Refugio</router-link>
             </li>
             <li class="nav-item h6 ms-3 mb-0">
               <div class="d-flex align-items-center">
                 Adoptados
-                <span class="badge text-bg-danger rounded-pill ms-1">{{ petsCount }}</span>
+                <span class="badge text-bg-dark rounded-pill ms-1">{{ petsCount }}</span>
               </div>
             </li>
           </ul>
@@ -30,6 +30,7 @@
   </header>
 
   <main class="pt-5">
+    
         <router-view v-slot="{ Component, route }">
             <transition name="fade" mode="out-in">
 
@@ -44,7 +45,7 @@
     <div class="container">
       <div class="row justify-content-center">
         <div class="col-lg-7">
-          <p class="small opacity-75 m-0">Este es un proyecto web de simulación con fines educativos. No se recolectan, almacenan ni comparten datos personales. Tu privacidad está protegida y toda la información es ficticia.</p>
+          <p class="small opacity-50 m-0">Este es un proyecto web de simulación con fines educativos. No se recolectan, almacenan ni comparten datos personales. Tu privacidad está protegida y toda la información es ficticia.</p>
         </div>
       </div>      
     </div>
