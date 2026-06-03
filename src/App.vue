@@ -17,9 +17,6 @@
             <li class="nav-item">
               <router-link class="nav-link text-dark" to="/pets">Refugio</router-link>
             </li>
-            <li class="nav-item ms-3">
-              <router-link class="nav-link text-dark" to="/login"><i class="bi bi-person-fill"></i> Ingresar</router-link>
-            </li>
             <li class="nav-item h6 ms-3 mb-0">
               <div class="d-flex align-items-center">
                 Adoptados

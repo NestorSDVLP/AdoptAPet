@@ -32,6 +32,7 @@
     */
 
     import { ref, onMounted } from 'vue'
+    import { usePetsStore } from '@/stores/pets.store'
     import PetDetailInfo from '@/features/pets/components/PetDetailInfo.vue'
     import AppBreadcrumbs from '@/shared/components/AppBreadcrumbs.vue'
 

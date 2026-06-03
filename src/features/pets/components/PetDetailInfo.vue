@@ -9,7 +9,7 @@
 <template>
 
     <section :id="`detailInfoPet-${pet.id}`" v-if="pet">
-        <div class="row g-4">
+        <div class="row g-5">
             <div class="col-6">
                 <img :src="pet.thumb" class="w-100" :alt="pet.name">                        
             </div>

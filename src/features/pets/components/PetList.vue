@@ -2,17 +2,20 @@
 
     <div class="row g-4">
 
-        <div v-for="pet in petsStore.pets" :key="pet.id" :id="pet.id" class="col-sm-6">
+        <div v-for="pet in petsStore.filteredPets" :key="pet.id" :id="pet.id" class="col-sm-6">
             
             <PetCard
                 :id="pet.id"
                 :petThumb="pet.thumb"
                 :petType="pet.type"
+                :petTypeSlug="pet.type_slug"
                 :petName="pet.name"
                 :petNameSlug="pet.name_slug"
                 :petGender="pet.gender"
+                :petGenderSlug="pet.gender_slug"
                 :petAge="pet.age"
                 :petAgeUnit="pet.age_unit"
+                :petAgeSlug="pet.age_slug"
                 :petDescription="pet.description"
                 :featured="pet.featured"
                 :adopted="pet.adopted"

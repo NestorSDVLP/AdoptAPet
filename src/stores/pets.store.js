@@ -33,7 +33,6 @@ export const usePetsStore = defineStore('pets', () => {
         type: 'all',
         age: 'all',
         gender: 'all',
-        id: 'all',
         page: 1
     })
 
@@ -77,8 +76,6 @@ export const usePetsStore = defineStore('pets', () => {
 
         filters.value.gender = newFilters.gender
 
-        //filters.value.id = newFilters.id
-
         filters.value.page = newFilters.page
 
     }
@@ -98,22 +95,17 @@ export const usePetsStore = defineStore('pets', () => {
             const matchType =
                 filters.value.type === 'all'
                 ||
-                pet.type === filters.value.type
+                pet.type_slug === filters.value.type
 
             const matchAge =
                 filters.value.age === 'all'
                 ||
-                pet.age === filters.value.age
+                pet.age_slug === filters.value.age
 
             const matchGender =
                 filters.value.gender === 'all'
                 ||
-                pet.gender === filters.value.gender
-
-            /*const matchId =
-                filters.value.id === 'all'
-                ||
-                pet.id === Number(filters.value.id)*/
+                pet.gender_slug === filters.value.gender
 
             return (
                 matchType
@@ -121,8 +113,6 @@ export const usePetsStore = defineStore('pets', () => {
                 matchAge
                 &&
                 matchGender
-                /*&&
-                matchId*/
             )
 
         })

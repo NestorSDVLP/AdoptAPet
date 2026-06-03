@@ -45,18 +45,13 @@ export function usePetFilters() {
 
     const filters = computed(() => {
 
+        console.log('route.params', route.params)
+
         return {
-
             type: route.params.type || 'all',
-
             age: route.params.age || 'all',
-
             gender: route.params.gender || 'all',
-
-            //id: route.params.id || 'all',
-
             page: Number(route.params.page) || 1
-
         }
 
     })
@@ -70,6 +65,8 @@ export function usePetFilters() {
     */
 
     watch(filters, (newFilters) => {
+
+        console.log('WATCH EJECUTADO', newFilters)
 
         petsStore.setFilters(newFilters)
 
@@ -87,7 +84,6 @@ export function usePetFilters() {
         type,
         age,
         gender,
-        //id,
         page
     }) => {
 
@@ -96,17 +92,10 @@ export function usePetFilters() {
             name: 'pets',
 
             params: {
-
                 type: type || filters.value.type,
-
                 age: age || filters.value.age,
-
                 gender: gender || filters.value.gender,
-
-                id: id || filters.value.id,
-
                 page: page || filters.value.page
-
             }
 
         })
