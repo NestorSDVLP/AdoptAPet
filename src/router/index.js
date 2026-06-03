@@ -32,16 +32,18 @@ const routes = [
 
     {
         path: '/pets',
-        redirect: '/pets/type/all/age/all/gender/all/id/all/page/1'
+        //redirect: '/pets/type/all/age/all/gender/all/id/all/page/1'
+        redirect: '/pets/type/all/age/all/gender/all/page/1'
     },
 
     {
-        path: '/pets/type/:type/age/:age/gender/:gender/id/:id/page/:page',
+        //path: '/pets/type/:type/age/:age/gender/:gender/id/:id/page/:page',
+        path: '/pets/type/:type/age/:age/gender/:gender/page/:page',
         name: 'pets',
         component: PetsView
     },
     {
-        path: '/pet/:id',
+        path: '/pet/:slug',
         name: 'pet',
         component: PetDetailView
     }

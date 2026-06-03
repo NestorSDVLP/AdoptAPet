@@ -13,6 +13,8 @@
             <h1>Refugio</h1>
             <hr class="mb-4">
 
+            <AppBreadcrumbs/>
+
             <PetDetailInfo/>
 
         </div>
@@ -31,5 +33,6 @@
 
     import { ref, onMounted } from 'vue'
     import PetDetailInfo from '@/features/pets/components/PetDetailInfo.vue'
+    import AppBreadcrumbs from '@/shared/components/AppBreadcrumbs.vue'
 
 </script>

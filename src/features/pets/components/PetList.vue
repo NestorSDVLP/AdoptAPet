@@ -1,12 +1,3 @@
-<style scoped>
-
-/*
-* Estilos exclusivos del listado de mascotas.
-*/
-
-</style>
-
-
 <template>
 
     <div class="row g-4">
@@ -18,10 +9,12 @@
                 :petThumb="pet.thumb"
                 :petType="pet.type"
                 :petName="pet.name"
+                :petNameSlug="pet.name_slug"
                 :petGender="pet.gender"
                 :petAge="pet.age"
                 :petAgeUnit="pet.age_unit"
                 :petDescription="pet.description"
+                :featured="pet.featured"
                 :adopted="pet.adopted"
                 @adopt="onAdopt"
             />

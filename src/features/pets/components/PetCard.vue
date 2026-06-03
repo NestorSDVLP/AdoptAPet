@@ -1,25 +1,15 @@
-<style scoped>
-
-/*
-* Estilos locales del componente.
-* Al utilizar "scoped", las reglas CSS sólo afectan
-* a esta tarjeta y no al resto de la aplicación.
-*/
-
-</style>
-
 <template>
 
     <div :id="`cardPet-${id}`" class="card-pet card border-0 box-shadow">
         
-        <router-link :to="{ name: 'pet', params: { id: id } }">
+        <router-link :to="{ name: 'pet', params: { slug: petNameSlug } }">
             <img :src="petThumb" class="card-img-top" :alt="petName">
         </router-link>
 
         <div class="card-body">
             <small class="opacity-50">{{ petType }}</small>
             
-            <router-link :to="{ name: 'pet', params: { id: id } }" class="text-decoration-none text-dark">
+            <router-link :to="{ name: 'pet', params: { slug: petNameSlug } }" class="text-decoration-none text-dark">
                 <h3 class="h2">{{ petName }}</h3>
             </router-link>
 
@@ -38,7 +28,7 @@
         <div class="card-footer bg-transparent border-top-0">
             <div class="row g-3">
                 <div class="col-6">
-                    <router-link :to="{ name: 'pet', params: { id: id } }" class="btn-learnmore btn btn-outline-dark rounded-pill w-100">
+                    <router-link :to="{ name: 'pet', params: { slug: petNameSlug } }" class="btn-learnmore btn btn-outline-dark rounded-pill w-100">
                         Conocer más <i class="bi bi-chevron-right"></i>
                     </router-link>
                 </div>
@@ -87,12 +77,15 @@
     const props = defineProps({
         id: Number,
         petType: String,
+        petTypeSlug: String,
         petThumb: String,
         petName: String,
+        petNameSlug: String,
         petGender: String,
         petAge: Number,
         petAgeUnit: String,
         petDescription: String,
+        featured: Boolean,
         adopted: Boolean
     })
 

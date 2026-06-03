@@ -77,7 +77,7 @@ export const usePetsStore = defineStore('pets', () => {
 
         filters.value.gender = newFilters.gender
 
-        filters.value.id = newFilters.id
+        //filters.value.id = newFilters.id
 
         filters.value.page = newFilters.page
 
@@ -110,10 +110,10 @@ export const usePetsStore = defineStore('pets', () => {
                 ||
                 pet.gender === filters.value.gender
 
-            const matchId =
+            /*const matchId =
                 filters.value.id === 'all'
                 ||
-                pet.id === Number(filters.value.id)
+                pet.id === Number(filters.value.id)*/
 
             return (
                 matchType
@@ -121,8 +121,8 @@ export const usePetsStore = defineStore('pets', () => {
                 matchAge
                 &&
                 matchGender
-                &&
-                matchId
+                /*&&
+                matchId*/
             )
 
         })
@@ -138,7 +138,7 @@ export const usePetsStore = defineStore('pets', () => {
     * presentes en memoria.
     */
 
-    const getPet = async (id) => {
+    const getPet = async (slug) => {
 
         const response = await fetch('/data/pets/pets.json')
 
@@ -146,7 +146,7 @@ export const usePetsStore = defineStore('pets', () => {
 
         pets.value = data
 
-        return pets.value.find(item => item.id === Number(id));
+        return pets.value.find(item => item.name_slug === String(slug));
 
     }
 

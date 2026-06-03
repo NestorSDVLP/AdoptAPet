@@ -53,7 +53,7 @@ export function usePetFilters() {
 
             gender: route.params.gender || 'all',
 
-            id: route.params.id || 'all',
+            //id: route.params.id || 'all',
 
             page: Number(route.params.page) || 1
 
@@ -87,7 +87,7 @@ export function usePetFilters() {
         type,
         age,
         gender,
-        id,
+        //id,
         page
     }) => {
 

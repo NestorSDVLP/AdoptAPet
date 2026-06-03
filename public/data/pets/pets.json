@@ -9,7 +9,7 @@
     "thumb": "/data/pets/images/blackie.jpg",
     "age": 3,
     "age_unit": "meses",
-    "description": "<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.</p><p>Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a,</p>",
+    "description": "<p>Blackie es una cachorrita de 3 meses, pelaje negro brillante y mirada de bebé que enamora. Es chiquita pero con una energía que no le entra en el cuerpo. Está en esa edad hermosa de descubrir el mundo: morder juguetitos, correr atrás de su cola y quedarse dormida en 2 segundos panza arriba. Es súper sociable y se adapta a todo porque todavía es una esponja. Necesita una familia con tiempo y paciencia para enseñarle lo básico: hacer pis afuera, no morder zapatillas y que la correa es amiga. Si la adoptás ahora, crece con vos y van a ser inseparables. Blackie te promete años de juegos, mimos y ser la reina de la casa.</p>",
     "featured": false,
     "adopted": false
   },
@@ -23,7 +23,7 @@
     "thumb": "/data/pets/images/cholo.jpg",
     "age": 4,
     "age_unit": "meses",
-    "description": "<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.</p><p>Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a,</p>",
+    "description": "<p>Cholo es un cachorro macho de 4 meses, de esos que tienen pinta de Golden Retriever pero con alma de mestizo de calle, como todos los del refugio. Tiene las orejitas caídas, pelo dorado suave y una cara de bebé que te desarma. Está en la etapa más linda: curioso, juguetón, y con ganas de comerse el mundo a mordidas. Es chiquito todavía pero se nota que va a ser grandote y de corazón gigante. Como todo cachorro necesita paciencia para aprender: hacer pis afuera, que la correa no es para morder, y que los sillones no son juguetes. Pero a cambio te da amor incondicional, juegos a toda hora y esa lealtad que solo un perro de refugio sabe dar. Si lo adoptás ahora, Cholo crece con vos y se vuelve tu sombra para siempre. Ideal para familia con tiempo para educarlo con amor.</p>",
     "featured": false,
     "adopted": false
   },
@@ -37,7 +37,7 @@
     "thumb": "/data/pets/images/cromia.jpg",
     "age": 3,
     "age_unit": "meses",
-    "description": "<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.</p><p>Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a,</p>",
+    "description": "<p>Cromia es una gatita hembra de 3 meses que parece salida de un cuento. Tiene heterocromia: un ojito celeste y otro verde, como si tuviera dos pedacitos de cielo distintos mirándote. Es blanquita y con solo 3 meses ya se le nota que va a tener pelo largo y esponjoso. La cara que tiene es para morirse de ternura: carita chiquita, expresión curiosa y esas orejitas atentas a todo. Está en la edad de explorar cada rincón, jugar con cualquier hilito y después dormirse hecha un bollito. Es dulce, mansa y de esas que ronronean apenas las alzás. Como es chiquita se adapta súper fácil a depto, casa, chicos, otros animales. Cromia no pide mucho: una camita calentita, comidita rica y alguien que se quede bobo mirando sus ojitos de colores todo el día.</p>",
     "featured": false,
     "adopted": false
   },
@@ -49,9 +49,9 @@
     "name_slug": "don-pedro",
     "gender": "Macho",
     "thumb": "/data/pets/images/donpedro.jpg",
-    "age": 6,
+    "age": 10,
     "age_unit": "años",
-    "description": "<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.</p><p>Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a,</p>",
+    "description": "<p>Don Pedro es un señor perro de 10 años, macho, rescatado de la calle. Es negrito con pechito blanco y el hocico ya canoso, esas canas que le dan facha de sabio. Tiene unos ojos marrones brillantes que te miran como diciendo: Yo ya viví, yo ya sé. De raza no tiene pedigree: parece labrador pero es 100% calle, de los que se ganaron todo a pulm, y por eso vale doble. A sus 10 años ya no es cachorro revoltoso: es tranquilo, compañero, de los que se acuestan a tus pies y te cuidan sin hacer ruido. Sabe lo que es sufrir en la calle, así que cuando encuentra un hogar lo valora el triple. Es leal, agradecido y tiene ese amor sereno de los perros grandes. Don Pedro no pide juegos todo el día: pide respeto, una cuchita calentita y alguien que le rasque detrás de las orejas mientras mira la vida pasar. Adoptar a un adulto como él es darle la mejor etapa de su vida a quien más se lo merece.</p>",
     "featured": false,
     "adopted": false
   },
@@ -65,7 +65,7 @@
     "thumb": "/data/pets/images/emma.jpg",
     "age": 3,
     "age_unit": "años",
-    "description": "<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.</p><p>Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a,</p>",
+    "description": "<p>Emma es una gatita hembra de 3 años, atigrada con un detalle que la hace única: tiene el hociquito blanco como si se hubiera manchado con leche. Sus ojos son una mezcla entre ámbar y verdes, brillantes y súper expresivos. Y lo que más llama la atención: esas orejitas siempre paradas, firmes, como antenas. Emma no se le escapa una. Es de las curiosas, de las que revisan cada bolsa que entra a casa y te miran desde arriba del mueble como diciendo: A ver qué hacés. A sus 3 años ya tiene personalidad formada: es independiente pero súper compañera cuando agarra confianza. Le gusta estar cerca tuyo, observar todo y después venir a ronronear cuando menos te lo esperás. Con esas orejas siempre atentas y esa mirada, Emma es de las gatas que te hacen sentir que siempre hay alguien cuidando la casa. Dulce, despierta y con una facha bárbara.</p>",
     "featured": false,
     "adopted": false
   },
@@ -79,7 +79,7 @@
     "thumb": "/data/pets/images/fiera.jpg",
     "age": 3,
     "age_unit": "meses",
-    "description": "<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.</p><p>Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a,</p>",
+    "description": "<p>Fiera es un gatito macho de 3 meses, atigrado pero más oscuro y marcado que Ema. Tiene esos ojos celeste-azulados de bebé que te hipnotizan. Ahora se llama Fierita con cariño, porque es chiquito y todo, pero su nombre real es Fiera y se lo va a ganar cuando crezca. Es puro instinto cazador: está todo el día agazapado, cola moviéndose, listo para saltar sobre cualquier hilito, tapita o mosca que pase. Tiene esa concentración seria de los gatos cazadores, pero a los 2 segundos se le va la facha y termina panza arriba pidiendo mimos. Es juguetón a full, curioso, y de esos que convierten cualquier cosa en juguete. Con 3 meses está aprendiendo a ser gato: trepar, cazar y dormirse después de jugar como si no hubiera mañana. Si buscás un compañero divertido, activo y que te haga reír todo el día, Fierita es tu candidato. De grande va a ser un Fiera, pero ahora solo quiere jugar.</p>",
     "featured": false,
     "adopted": false
   },
@@ -91,9 +91,9 @@
     "name_slug": "francis",
     "gender": "Macho",
     "thumb": "/data/pets/images/francis.jpg",
-    "age": 3,
+    "age": 5,
     "age_unit": "años",
-    "description": "<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.</p><p>Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a,</p>",
+    "description": "<p>Francis es un gato macho de 5 años que parece mestizo, pero con toda la facha de siamés abandonado. Tiene pelo clarito, orejas negras y el hocico marrón chocolate oscuro, típico de los siameses. Pero lo que te roba el alma son sus ojos: celeste claro, transparentes, de esos que miran fijo y te dejan sin palabras. Es más delicado que los demás, de movimientos finos, elegante. Se nota que tiene sangre siamés porque son gatos que eligen a su humano y se pegan a él. Francis es de los que te siguen por la casa, te hablan con maullidos bajitos y se duermen pegados a vos. Con 5 años ya es un gato maduro, tranquilo, pero súper compañero. No pide lío, pide una familia que lo cuide como se merece, después de lo que le tocó vivir en la calle. Elegante, dulce y con esa mirada celeste que enamora.</p>",
     "featured": false,
     "adopted": false
   },
@@ -107,7 +107,7 @@
     "thumb": "/data/pets/images/guardian.jpg",
     "age": 9,
     "age_unit": "meses",
-    "description": "<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.</p><p>Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a,</p>",
+    "description": "<p><p>Guardian es un cachorrito macho de 9 meses que tiene toda la facha de Rottweiler pero con alma de mestizo. Es negro con detalles marrón miel y tiene las orejitas caídas típicas de cachorro, que le dan cara de bebé bueno. Aunque ya tiene 9 meses, parece más chiquito y no va a ser grandote como un Rottweiler de pedigree. Está en esa edad perfecta: ya no es un bebé frágil de 2 meses, pero todavía tiene toda la energía y las ganas de jugar. Es mezcla de guardián y compañero: el nombre le queda porque se nota que va a ser de los que cuidan la casa, pero sin perder la ternura de cachorro. Con las orejas caídas y ese color negro+miel, Guardian es de los que te miran y te derriten. Necesita familia con paciencia para seguir educándolo, paseos y muchos mimos. Te promete lealtad y protección, pero también siestas panza arriba.</p>",
     "featured": false,
     "adopted": false
   },
@@ -121,7 +121,7 @@
     "thumb": "/data/pets/images/helena.jpg",
     "age": 3,
     "age_unit": "meses",
-    "description": "<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.</p><p>Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a,</p>",
+    "description": "<p>Helena es una gatita hembra de 3 meses, súper delicada y con una facha que parece de porcelana. Es atigrada pero clarita, clarita, con la típica M marcada en la frente que tienen todos los atigrados. Lo que más destaca son sus ojos grises: claros, expresivos, de gata atenta a todo lo que pasa. Y atenta es poco: Helena se la pasa en el jardín cazando mariposas y bichitos. Está en la edad de descubrir el mundo con la nariz y las patitas, agazapada, cola quieta, lista para saltar. Es dulce pero curiosa, de las que investigan cada hoja y cada flor. Con solo 3 meses ya tiene esa elegancia natural y esa mirada gris que te observa como diciendo: Yo mando acá. Es ideal para casa con patio o jardín donde pueda sacar su instinto de cazadora, pero también para depto con ventana, porque va a estar horas mirando el mundo afuera. Helena te promete ronroneos suaves y compañía tranquila.</p>",
     "featured": false,
     "adopted": false
   },
@@ -135,7 +135,7 @@
     "thumb": "/data/pets/images/lucio.jpg",
     "age": 1,
     "age_unit": "año",
-    "description": "<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.</p><p>Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a,</p>",
+    "description": "<p>Lucio es un cachorro macho de 1 año, tricolor: blanco, marrón y marrón más oscuro. Es tipo pitbull amestizado, medio petiso pero bien robusto y musculoso. Tiene unos ojos saltones que lo hacen ver siempre sorprendido y con cara de ¿jugamos?. Las orejas todavía no deciden si paran o se caen, porque a sus 1 año sigue siendo cachorro puro. Y cachorro es: no para un segundo. Energía a full, quiere jugar, correr, morder juguetes y después dormir como tronco. Es de los perros que te reciben saltando y moviendo toda la cola. A pesar de la pinta fuerte de pitbull, Lucio es un bebé grande, cariñoso y súper compañero. Necesita una familia activa, con espacio y tiempo para sacarlo a gastar energía. Si lo educás con amor y firmeza, Lucio se vuelve un perro fiel, protector y pegote. Te promete risas, abrazos fuertes y ser tu sombra.</p>",
     "featured": false,
     "adopted": false
   },
@@ -149,7 +149,7 @@
     "thumb": "/data/pets/images/lukas.jpg",
     "age": 3,
     "age_unit": "años",
-    "description": "<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.</p><p>Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a,</p>",
+    "description": "<p>Lukas es un gato macho de 3 años, peludo y bigotudo como esos gatos nórdicos que aguantan el frío. Es una belleza total: pecho blanco, hocico blanco y el resto del cuerpo con un manto marrón clarito tipo ocre, súper elegante. Tiene esa cara llena de pelo que lo hace ver esponjoso y abrazable. Sus ojos son grises o verdes claritos, de esos que te miran con calma y sabiduría. Con 3 años ya es un gato maduro, tranquilo, pero con toda esa facha de gato salvaje de montaña. Es de los peludos que te dan ganas de enterrar la cara en el pecho. Ideal para alguien que ame cepillar y acurrucar gatos grandes de pelo largo. Lukas te promete compañía serena, ronroneos profundos y ser el rey peludo de la casa.</p>",
     "featured": false,
     "adopted": false
   },
@@ -163,7 +163,7 @@
     "thumb": "/data/pets/images/pantro.jpg",
     "age": 2,
     "age_unit": "años",
-    "description": "<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.</p><p>Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a,</p>",
+    "description": "<p>Pantro es un gato negro de pelo corto, brillante y grasoso, como si siempre estuviera recién lustrado. Tiene todo de gato Bombay: porte elegante, cuerpo estilizado, mirada intensa. Sus ojos son dorados hermosos, de esos que brillan en la oscuridad y te hipnotizan. Pero Pantro tiene su detalle único: unas manchitas blancas en el pecho. Por eso no es Bombay de pedigree, pero eso lo hace más especial todavía. Esa manchita blanca es su firma, como si llevara un dije puesto. Con ese pelaje negro azabache y ojos dorados, Pantro parece una mini pantera de casa. Es de los gatos que caminan elegantes, observan todo en silencio y después vienen a dormir pegados a vos. Si buscás un gato con facha de felino salvaje pero corazón de compañero, Pantro es el indicado. Misterioso, brillante y único.</p>",
     "featured": false,
     "adopted": false
   },
@@ -177,7 +177,7 @@
     "thumb": "/data/pets/images/pintita.jpg",
     "age": 3,
     "age_unit": "meses",
-    "description": "<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.</p><p>Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a,</p>",
+    "description": "<p>Pintita es un cachorrito macho de 2 meses, todo blanco, blanco, blanco... como una nube. Es tipo pitbull mestizo, pero petiso y redondito todavía. Tiene ojos súper dulces, de esos que te miran y te ablandan el corazón. Aunque en la foto sale con los ojitos cerrados, se nota que son tiernos. Es muy chiquito y lo que más le encanta es dormir: acobachadito entre frazadas, entre brazos, hecho un bollito. Es puro bebé que busca calor y mimos. Su nombre viene de su detalle distintivo: tiene una pintita negra en la oreja izquierda, en medio de todo ese cuerpo blanco. Esa manchita lo hace único. Con 2 meses recién está empezando la vida, así que necesita una familia con paciencia para enseñarle, mucho juego suave y siestas compartidas. Pintita te promete ser tu compañero de frazada y el perro más mimado de la casa.</p>",
     "featured": false,
     "adopted": false
   },
@@ -191,7 +191,7 @@
     "thumb": "/data/pets/images/pocho.jpg",
     "age": 3,
     "age_unit": "años",
-    "description": "<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.</p><p>Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a,</p>",
+    "description": "<p>Pocho es un gato macho de 3 años, Bombay puro mestizo pero con toda la facha. Es totalmente negro, negro azabache, sin una sola manchita blanca. Pelo corto, grasoso y brillante, de esos que parecen recién lustrados. Hocico hermoso, estilizado, y ojos dorados tirando a amarillos que brillan como dos faritos. Tiene porte de pantera mini: camina elegante, superestilizado, mirando todo con esa actitud felina. Los Bombay son gatos que se pegan a su humano y Pocho no es la excepción. Con 3 años ya es maduro, compañero, de los que te siguen por la casa y duermen al lado tuyo. Si buscás un gato negro brillante, misterioso y con mirada dorada que te enamore, Pocho es tu candidato. Elegante, fiel y con facha de rockero.</p>",
     "featured": false,
     "adopted": false
   },
@@ -205,7 +205,7 @@
     "thumb": "/data/pets/images/tigro.jpg",
     "age": 5,
     "age_unit": "años",
-    "description": "<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.</p><p>Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a,</p>",
+    "description": "<p>Tigro es un gato macho de 5 años, de esos típicos gatos amarillos que son puro sol. Tiene el manto dorado completo, con pechito blanco, patitas blancas y hocico blanco que le da un toque tierno. Ya es grandecito, no es cachorro, es un señor gato. Si bien pasa gran parte del día durmiendo, tiene unos ojos verdes hermosos que te miran con calma. Tigro es el compañero ideal para maratonear series y películas en la cama. Especialmente en invierno: se te tira a los pies o directo al pecho y se convierte en estufa portátil con ronroneo incluido. Tranquilo, casero y pegote. Si buscás un gato grande, dorado y que te haga compañía mientras mirás tele, Tigro es el indicado.</p>",
     "featured": false,
     "adopted": false
   },
@@ -219,7 +219,7 @@
     "thumb": "/data/pets/images/tonio.jpg",
     "age": 5,
     "age_unit": "meses",
-    "description": "<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.</p><p>Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a,</p>",
+    "description": "<p>Tonio es un cachorrito macho de 5 meses que va a ser grandote, grandote. Con ese pelo largo y esas patas enormes que ya tiene, se nota que viene tamaño Rottweiler. De hecho es muy parecido a Guardián, pero versión peludo. Tiene pinta de guardián de casa, de esos perros que imponen pero que por dentro son un amor. A los 5 meses ya tiene patas gigantes y eso te dice todo: va a necesitar espacio para correr y jugar. Una casa con fondo o una terraza le viene perfecto. No es para departamento chico, porque este gordo necesita gastar energía. Tonio es de los perros que crecen rápido, aprenden rápido y se vuelven súper compañeros y protectores. Si tenés espacio y querés un perro grande, fiel y con facha de guardián peludo, Tonio te está esperando. Le queda toda una vida por delante para dar amor.</p>",
     "featured": false,
     "adopted": false
   }
