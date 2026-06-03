@@ -1,3 +1,13 @@
+<style scoped>
+
+/*
+* Estilos locales del componente.
+* Al utilizar "scoped", las reglas CSS sólo afectan
+* a esta tarjeta y no al resto de la aplicación.
+*/
+
+</style>
+
 <template>
 
     <div :id="`cardPet-${id}`" class="card-pet card border-0 box-shadow">
@@ -45,11 +55,34 @@
 
 <script setup>
 
+    /*
+    * Define los eventos personalizados que este componente
+    * puede emitir hacia su componente padre.
+    *
+    * En este caso se utiliza para notificar que una mascota
+    * fue seleccionada para adopción.
+    */
+
     const emit = defineEmits(['adopt'])
+
+    /*
+    * Emite el evento "adopt" enviando el id de la mascota.
+    *
+    * La lógica de adopción no vive aquí.
+    * Este componente sólo informa la acción y delega
+    * la actualización del estado al componente padre.
+    */
 
     const adoptPet = () => {
         emit('adopt', props.id)
     }
+
+    /*
+    * Props recibidas desde PetList.
+    *
+    * Representan toda la información necesaria para
+    * renderizar una tarjeta individual de mascota.
+    */
 
     const props = defineProps({
         id: Number,

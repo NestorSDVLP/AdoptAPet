@@ -1,3 +1,7 @@
+<!--
+  Estilos exclusivos del componente raíz.
+-->
+
 <template>
 
   <header class="bg-primary bg-gradient box-shadow fixed-top">
@@ -30,9 +34,18 @@
   </header>
 
   <main class="pt-5">
+
+        <!--
+          Área principal donde Vue Router renderiza
+          las vistas activas.
+        -->
     
         <router-view v-slot="{ Component, route }">
             <transition name="fade" mode="out-in">
+
+                <!--
+                Transición utilizada al cambiar de ruta.
+                -->
 
                 <component :is="Component" :key="route.path" />
 
@@ -55,9 +68,22 @@
 
 <script setup>
 
+  /*
+  * Utilidades reactivas utilizadas por el layout.
+  */
+
   import { computed } from 'vue'
 
+  /*
+  * Acceso al estado global de mascotas.
+  */
+
   import { usePetsStore } from '@/stores/pets.store'
+
+  /*
+  * Computed que expone el total de mascotas
+  * adoptadas para el contador del header.
+  */
 
   const petsStore = usePetsStore()
 

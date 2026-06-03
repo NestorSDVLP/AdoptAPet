@@ -1,3 +1,11 @@
+<style scoped>
+
+/*
+* Estilos exclusivos de la vista de detalle.
+*/
+
+</style>
+
 <template>
 
     <section :id="`detailInfoPet-${pet.id}`" v-if="pet">
@@ -35,6 +43,15 @@
 
 <script setup>
 
+/*
+* Dependencias utilizadas:
+*
+* - ref: estado reactivo local.
+* - onMounted: ejecuta lógica al montar el componente.
+* - useRoute: acceso a parámetros de la URL.
+* - usePetsStore: acceso al estado global de mascotas.
+*/
+
 import { ref, onMounted } from 'vue'
 import { useRoute } from 'vue-router'
 import { usePetsStore } from '@/stores/pets.store'
@@ -43,11 +60,29 @@ const route = useRoute()
 
 const petsStore = usePetsStore()
 
+/*
+* Estado reactivo que almacenará la mascota
+* obtenida desde el store.
+*/
+
 const pet = ref(null)
+
+/*
+* Al cargar el componente se obtiene el id desde
+* la URL y se consulta la información completa
+* de la mascota en el store.
+*/
 
 onMounted(async () => {
     pet.value = await petsStore.getPet(route.params.id)
 })
+
+/*
+* Marca la mascota actual como adoptada.
+*
+* La actualización del estado se realiza
+* centralmente desde Pinia.
+*/
 
 const adoptPet = () => {
     petsStore.adoptPet(pet.value.id)

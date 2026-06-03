@@ -1,3 +1,11 @@
+<style scoped>
+
+/*
+* Estilos específicos de la página de listado.
+*/
+
+</style>
+
 <template>
     
     <section class="py-5">
@@ -22,6 +30,15 @@
 </template>
 
 <script setup>
+
+    /*
+    * PetFilters: navegación por filtros.
+    *
+    * PetList: renderizado de resultados.
+    *
+    * Esta vista actúa como layout principal
+    * del refugio.
+    */
 
     import { ref, onMounted } from 'vue'
     import PetList from '@/features/pets/components/PetList.vue'

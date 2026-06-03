@@ -1,3 +1,14 @@
+<style scoped>
+
+/*
+* Estilos locales del panel de filtros.
+*
+* Actualmente el componente utiliza únicamente
+* estilos globales de Bootstrap.
+*/
+
+</style>
+
 <template>
 
     <h6>Categorías:</h6>
