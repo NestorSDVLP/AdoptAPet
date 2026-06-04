@@ -2,9 +2,9 @@
 
     <h6>Sexo:</h6>
     <div class="list-group list-group-flush list-has-chevron small box-shadow mb-3">
-        <router-link class="list-group-item list-group-item-action" to="/pets">Machos <i class="bi bi-chevron-right"></i></router-link>
-        <router-link class="list-group-item list-group-item-action" to="/pets">Hembras <i class="bi bi-chevron-right"></i></router-link>
-        <router-link class="list-group-item list-group-item-action" to="/pets">Ver todos <i class="bi bi-chevron-right"></i></router-link>
+        <a href="#" class="list-group-item list-group-item-action" :class="{ active: filters.gender === 'males' }" @click.prevent="selectType('males')">Machos <i class="bi bi-chevron-right"></i></a>
+        <a href="#" class="list-group-item list-group-item-action" :class="{ active: filters.gender === 'females' }" @click.prevent="selectType('females')">Hembras <i class="bi bi-chevron-right"></i></a>
+        <a href="#" class="list-group-item list-group-item-action" :class="{ active: filters.gender === 'all' }" @click.prevent="selectType('all')">Ver todos <i class="bi bi-chevron-right"></i></a>
     </div>
 
 </template>
@@ -16,5 +16,12 @@
     })
 
     const emit = defineEmits(['change'])
+
+    const selectType = (gender) => {
+        emit('change', {
+            gender,
+            page: 1
+        })
+    }
 
 </script>

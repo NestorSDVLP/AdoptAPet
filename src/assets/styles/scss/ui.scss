@@ -14,7 +14,16 @@
             &:hover {
                 .bi-chevron-right {
                     transform: translate(5px,-50%);
-                }   
+                }
+            }
+
+            &.active {
+                color: $dark;
+                background-color: $primary;
+
+                .bi-chevron-right {
+                    transform: translate(10px,-50%) scale(120%);
+                }
             }
         }
     }
