@@ -1,11 +1,43 @@
 <template>
 
     <nav class="mb-4">
+
         <ol class="breadcrumb align-items-center">
-            <li class="breadcrumb-item"><a href="/">Home</a></li>
-            <li class="breadcrumb-item"><a href="/pets">Refugio</a></li>
-            <li class="breadcrumb-item h6 m-0">xxxxxxxx</li>
+
+            <li
+                v-for="item in items"
+                :key="item.label"
+                class="breadcrumb-item"
+            >
+
+                <router-link
+                    v-if="item.to"
+                    :to="item.to"
+                >
+                    {{ item.label }}
+                </router-link>
+
+                <span v-else>
+                    {{ item.label }}
+                </span>
+
+            </li>
+
         </ol>
+
     </nav>
 
 </template>
+
+<script setup>
+
+    defineProps({
+
+        items: {
+            type: Array,
+            default: () => []
+        }
+
+    })
+
+</script>

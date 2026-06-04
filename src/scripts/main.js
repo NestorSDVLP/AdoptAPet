@@ -26,7 +26,7 @@ import 'bootstrap/dist/js/bootstrap.bundle.js'
 */
 
 import App from '@/App.vue'
-import router from '@/router/index.js'
+import router from '@/router/routes.js'
 
 /*
 * Inicialización de la aplicación.

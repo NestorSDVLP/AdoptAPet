@@ -5,7 +5,7 @@
             <h1>Refugio</h1>
             <hr class="mb-4">
             
-            <AppBreadcrumbs/>
+            <AppBreadcrumbs :items="breadcrumbs" />
 
             <div class="row g-4">
                 <div class="col-3">
@@ -39,5 +39,8 @@
     import AppBreadcrumbs from '@/shared/components/AppBreadcrumbs.vue'
     import PetList from '@/features/pets/components/PetList.vue'
     import PetFilters from '@/features/pets/components/filters/PetFilters.vue'
+    import { usePetFilters } from '@/features/pets/composables/usePetsFilters'
+
+    const { breadcrumbs } = usePetFilters()
 
 </script>

@@ -1,21 +1,23 @@
-const filterLabels = {
+export const PET_FILTERS = {
+
     type: {
-        all: 'Todos',
-        dogs: 'Perros',
-        cats: 'Gatos'
+        all: { label: 'Todos' },
+        dogs: { label: 'Perros' },
+        cats: { label: 'Gatos' }
     },
 
     gender: {
-        all: 'Todos',
-        male: 'Machos',
-        female: 'Hembras'
+        all: { label: 'Todos' },
+        male: { label: 'Machos' },
+        female: { label: 'Hembras' }
     },
 
     age: {
-        all: 'Todos',
-        puppy: 'Cachorros',
-        young: 'Jóvenes',
-        adult: 'Adultos',
-        senior: 'Seniors'
+        all: { label: 'Todos' },
+        puppy: { label: 'Cachorros' },
+        young: { label: 'Jóvenes' },
+        adult: { label: 'Adultos' },
+        senior: { label: 'Seniors' }
     }
+
 }

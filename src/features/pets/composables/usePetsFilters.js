@@ -12,6 +12,8 @@ import { computed, watch } from 'vue'
 import { useRoute, useRouter } from 'vue-router'
 import { usePetsStore } from '@/stores/pets.store'
 
+import { PET_FILTERS } from '@/features/pets/constants/constantsPetsFilters'
+
 /*
 * Expone la lógica reutilizable de filtrado para
 * cualquier componente que necesite interactuar
@@ -66,8 +68,6 @@ export function usePetFilters() {
 
     watch(filters, (newFilters) => {
 
-        console.log('WATCH EJECUTADO', newFilters)
-
         petsStore.setFilters(newFilters)
 
     }, { immediate: true })
@@ -103,12 +103,83 @@ export function usePetFilters() {
     }
 
     /*
+    *
+    *
+    *
+    *
+    *
+    */
+
+    const breadcrumbs = computed(() => {
+
+        const items = [
+
+            {
+                label: 'Home',
+                to: '/'
+            },
+
+            {
+                label: 'Refugio',
+                to: '/pets/type/all/age/all/gender/all/page/1'
+            }
+
+        ]
+
+        if (filters.value.type !== 'all') {
+
+            items.push({
+
+                label: `Tipo: ${
+                    PET_FILTERS.type[
+                        filters.value.type
+                    ].label
+                }`
+
+            })
+
+        }
+
+        if (filters.value.gender !== 'all') {
+
+            items.push({
+
+                label: `Género: ${
+                    PET_FILTERS.gender[
+                        filters.value.gender
+                    ].label
+                }`
+
+            })
+
+        }
+
+        if (filters.value.age !== 'all') {
+
+            items.push({
+
+                label: `Edad: ${
+                    PET_FILTERS.age[
+                        filters.value.age
+                    ].label
+                }`
+
+            })
+
+        }
+
+        return items
+
+    })
+
+    /*
     * API pública del composable.
     */
 
     return {
         filters,
-        updateFilters
+        updateFilters,
+        breadcrumbs
     }
 
 }
