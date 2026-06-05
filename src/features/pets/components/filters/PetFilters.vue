@@ -1,19 +1,23 @@
 <template>
 
-    <PetTypeFilter
-        :filters="filters"
-        @change="updateFilters"
-    />
+    <div class="sidebar-sticky-top sticky-top">
 
-    <PetGenderFilter
-        :filters="filters"
-        @change="updateFilters"
-    />
+        <PetTypeFilter
+            :filters="filters"
+            @change="updateFilters"
+        />
 
-    <PetAgeFilter
-        :filters="filters"
-        @change="updateFilters"
-    />
+        <PetGenderFilter
+            :filters="filters"
+            @change="updateFilters"
+        />
+
+        <PetAgeFilter
+            :filters="filters"
+            @change="updateFilters"
+        />
+
+    </div>
 
 </template>
 

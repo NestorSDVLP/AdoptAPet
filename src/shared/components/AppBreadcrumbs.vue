@@ -4,16 +4,9 @@
 
         <ol class="breadcrumb align-items-center">
 
-            <li
-                v-for="item in items"
-                :key="item.label"
-                class="breadcrumb-item"
-            >
+            <li v-for="item in items" :key="item.label" class="breadcrumb-item">
 
-                <router-link
-                    v-if="item.to"
-                    :to="item.to"
-                >
+                <router-link v-if="item.to" :to="item.to">
                     {{ item.label }}
                 </router-link>
 

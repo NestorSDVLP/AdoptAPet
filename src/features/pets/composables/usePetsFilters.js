@@ -73,13 +73,13 @@ export function usePetFilters() {
     }, { immediate: true })
 
     /*
-    * Actualiza los filtros navegando hacia una nueva
-    * URL conservando los valores que no cambian.
     *
-    * Esto permite compartir enlaces y mantener
-    * sincronizado el estado de la aplicación.
+    *
+    * XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+    *
+    *
     */
-
+   
     const updateFilters = ({
         type,
         age,
@@ -87,15 +87,26 @@ export function usePetFilters() {
         page
     }) => {
 
+        const nextType = type || filters.value.type
+        const nextAge = age || filters.value.age
+        const nextGender = gender || filters.value.gender
+
+        const filtersChanged =
+            nextType !== filters.value.type ||
+            nextAge !== filters.value.age ||
+            nextGender !== filters.value.gender
+
         router.push({
 
             name: 'pets',
 
             params: {
-                type: type || filters.value.type,
-                age: age || filters.value.age,
-                gender: gender || filters.value.gender,
-                page: page || filters.value.page
+                type: nextType,
+                age: nextAge,
+                gender: nextGender,
+                page: filtersChanged
+                    ? 1
+                    : page || filters.value.page
             }
 
         })
@@ -105,7 +116,7 @@ export function usePetFilters() {
     /*
     *
     *
-    *
+    * XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
     *
     *
     */
@@ -173,13 +184,70 @@ export function usePetFilters() {
     })
 
     /*
+    * Paginación:
+    *
+    * A partir del listado filtrado se calcula:
+    *
+    * - cantidad total de resultados
+    * - cantidad total de páginas
+    * - subconjunto correspondiente a la página actual
+    *
+    * La página activa se obtiene desde la URL,
+    * manteniendo una única fuente de verdad.
+    */
+
+    const PETS_PER_PAGE = 4
+
+    /*
+    *
+    *
+    * XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+    *
+    *
+    */
+
+    const totalPages = computed(() => {
+
+        return Math.ceil(
+            petsStore.filteredPets.length /
+            PETS_PER_PAGE
+        )
+
+    })
+
+    /*
+    *
+    *
+    * XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+    *
+    *
+    */
+
+    const paginatedPets = computed(() => {
+
+        const start = (
+            filters.value.page - 1
+        ) * PETS_PER_PAGE
+
+        const end = start + PETS_PER_PAGE
+
+        return petsStore.filteredPets.slice(
+            start,
+            end
+        )
+
+    })
+
+    /*
     * API pública del composable.
     */
 
     return {
         filters,
         updateFilters,
-        breadcrumbs
+        breadcrumbs,
+        paginatedPets,
+        totalPages
     }
 
 }

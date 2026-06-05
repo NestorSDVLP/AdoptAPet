@@ -1,3 +1,7 @@
+.sidebar-sticky-top {
+    top: 80px;
+}
+
 .list-group {
     &.list-has-chevron {
         .list-group-item-action {
@@ -52,6 +56,16 @@
         a {
             text-decoration: none;
             color: $dark;
+        }
+    }
+}
+
+.pagination {
+    .page-item {
+        .page-link {
+            color: $dark;
+
+            /*&.active {}*/
         }
     }
 }

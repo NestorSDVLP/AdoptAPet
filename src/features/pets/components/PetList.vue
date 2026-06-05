@@ -8,7 +8,8 @@
 
         <div class="row g-4">
 
-            <div v-for="pet in petsStore.filteredPets" :key="pet.id" :id="pet.id" class="col-sm-6">
+            <div v-for="pet in paginatedPets" :key="pet.id" :id="pet.id" class="col-sm-6">
+            
                 
                 <PetCard
                     :id="pet.id"
@@ -67,6 +68,16 @@
     */
 
     usePetFilters()
+
+    /*
+    *
+    *
+    * XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+    *
+    *
+    */
+
+    const { paginatedPets } = usePetFilters()
 
     /*
     * Obtiene el listado de mascotas cuando el
