@@ -79,7 +79,7 @@ export function usePetFilters() {
     *
     *
     */
-   
+
     const updateFilters = ({
         type,
         age,
@@ -239,6 +239,18 @@ export function usePetFilters() {
     })
 
     /*
+    *
+    *
+    * XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+    *
+    *
+    */
+
+    const totalResults = computed(() => {
+        return petsStore.filteredPets.length
+    })
+
+    /*
     * API pública del composable.
     */
 
@@ -247,7 +259,8 @@ export function usePetFilters() {
         updateFilters,
         breadcrumbs,
         paginatedPets,
-        totalPages
+        totalPages,
+        totalResults
     }
 
 }

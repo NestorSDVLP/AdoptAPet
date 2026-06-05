@@ -1,6 +1,6 @@
 <template>
 
-    <nav class="mb-4">
+    <nav>
 
         <ol class="breadcrumb align-items-center">
 
