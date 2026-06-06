@@ -1,33 +1,40 @@
 <template>
 
-    <header class="bg-primary bg-gradient box-shadow fixed-top">
+    <header id="mainHeader" class="bg-primary bg-gradient box-shadow fixed-top">
         <div class="container">
             <nav class="navbar navbar-expand-lg px-0">
                 <router-link class="navbar-brand text-dark" to="/">
-                    <h1 class="h2 m-0">Adopt a Pet&reg;</h1>
+                    <div class="d-flex align-items-center">
+                        <img src="@/assets/images/logo.svg" class="logo me-2">
+                        <h1 class="h2 m-0">Adopt a Pet&reg;</h1>
+                    </div>
                 </router-link>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
             <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="mainNav">
                 <ul class="navbar-nav align-items-center ms-auto me-0">
-                <li class="nav-item">
-                    <router-link class="nav-link text-dark active" to="/">Home</router-link>
-                </li>
-                <li class="nav-item">
-                    <router-link class="nav-link text-dark" to="/pets">Refugio</router-link>
-                </li>
-                <li class="nav-item h6 ms-3 mb-0">
-                    <div class="d-flex align-items-center">
-                    Adoptados
-                    <span class="badge text-bg-dark rounded-pill ms-1">{{ petsCount }}</span>
-                    </div>
-                </li>
+                    <li class="nav-item">
+                        <router-link class="nav-link text-dark active" to="/">Home</router-link>
+                    </li>
+                    <li class="nav-item">
+                        <router-link class="nav-link text-dark" to="/pets">Refugio</router-link>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link " href="#" data-bs-toggle="offcanvas" data-bs-target="#offcanvasAdoptedPets">
+                            <span class="d-flex-inline align-items-center">
+                                Adoptados <span class="badge text-bg-dark rounded-pill ms-1">{{ petsCount }}</span>
+                                <i class="bi bi-chevron-down ms-2"></i>
+                            </span>
+                        </a>
+                    </li>
                 </ul>
             </div>
             </nav>
         </div>
     </header>
+
+    <AppHeaderAdoptedOffcanvas/>
 
 </template>
 
@@ -38,6 +45,8 @@
   */
 
   import { computed } from 'vue'
+
+  import AppHeaderAdoptedOffcanvas from '@/shared/components/AppHeaderAdoptedOffcanvas.vue'
 
   /*
   * Acceso al estado global de mascotas.
