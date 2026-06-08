@@ -24,8 +24,8 @@
                     :petAgeUnit="pet.age_unit"
                     :petAgeSlug="pet.age_slug"
                     :petDescription="pet.description"
-                    :featured="pet.featured"
-                    :adopted="pet.adopted"
+                    :petFeatured="pet.featured"
+                    :petAdopted="pet.adopted"
                     @adopt="onAdopt"
                 />
 
@@ -67,7 +67,7 @@
     * de la ruta y filtros almacenados en Pinia.
     */
 
-    usePetFilters()
+    //usePetFilters()
 
     /*
     *

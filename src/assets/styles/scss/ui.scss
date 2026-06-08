@@ -79,3 +79,21 @@
         }
     }
 }
+
+.swiper {
+  /* solo este carrusel */
+  --swiper-theme-color: #{$primary};
+  --swiper-navigation-color: #{$primary};
+  --swiper-pagination-color: #{$primary};
+
+  /* bullets inactivos */
+  // bullets
+  --swiper-pagination-bullet-size: 16px;          // 8px es el default
+  --swiper-pagination-bullet-horizontal-gap: 8px; // separación
+  --swiper-pagination-color: #{$primary};             // color activo
+  --swiper-pagination-bullet-inactive-color: #{$primary};
+  --swiper-pagination-bullet-inactive-opacity: 0.6;
+
+  /* tamaño de flechas */
+  --swiper-navigation-size: 30px;
+}

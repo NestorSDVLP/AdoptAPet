@@ -1,6 +1,16 @@
 <template>
 
-    <div :id="`cardPet-${id}`" class="card-pet card border-0 box-shadow">
+    <div :id="`cardPet-${id}`" class="card-pet card position-relative border-0 box-shadow">
+
+        <div v-if="petFeatured">
+            <div class="position-absolute bg-primary text-dark py-1 px-2">
+                <i class="bi bi-star-fill me-1"></i>
+                <i class="bi bi-star-fill me-1"></i>
+                <i class="bi bi-star-fill me-1"></i>
+                <i class="bi bi-star-fill me-1"></i>
+                <i class="bi bi-star-fill"></i>
+            </div>
+        </div>
         
         <router-link :to="{ name: 'pet', params: { slug: petNameSlug } }">
             <img :src="petThumb" class="card-img-top" :alt="petName">
@@ -34,7 +44,7 @@
                 </div>
                 <div class="col-6">
                     <button type="button" class="btn-adopt btn btn-primary rounded-pill w-100" @click="adoptPet">
-                        <i class="bi bi-check-circle-fill"></i>  {{ adopted ? 'Adoptado' : 'Adoptar' }}
+                        <i class="bi bi-check-circle-fill"></i>  {{ petAdopted ? 'Adoptado' : 'Adoptar' }}
                     </button>
                 </div>
             </div>
@@ -85,8 +95,8 @@
         petAge: Number,
         petAgeUnit: String,
         petDescription: String,
-        featured: Boolean,
-        adopted: Boolean
+        petFeatured: Boolean,
+        petAdopted: Boolean
     })
 
 </script>

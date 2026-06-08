@@ -12,9 +12,7 @@
         <router-view v-slot="{ Component, route }">
             <transition name="fade" mode="out-in">
 
-                <!--
-                Transición utilizada al cambiar de ruta.
-                -->
+                <!--Transición utilizada al cambiar de ruta.-->
 
                 <component :is="Component" :key="route.path" />
 

@@ -181,6 +181,22 @@ export const usePetsStore = defineStore('pets', () => {
     * Utilizada por el offcanvas del header.
     */
 
+    const featuredPets = computed(() => {
+
+        return pets.value.filter((pet) => {
+
+            return pet.featured
+
+        })
+
+    })
+
+    /*
+    * Colección de mascotas adoptadas.
+    *
+    * Utilizada por el offcanvas del header.
+    */
+
     const adoptedPets = computed(() => {
 
         return pets.value.filter((pet) => {
@@ -215,6 +231,7 @@ export const usePetsStore = defineStore('pets', () => {
         getPet,
         setFilters,
         adoptPet,
+        featuredPets,
         adoptedPets,
         adoptedCount
     }

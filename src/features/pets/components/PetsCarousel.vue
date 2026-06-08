@@ -1,0 +1,80 @@
+<template>
+  
+    <swiper v-bind="swiperOpts" class="pb-5">
+        <swiper-slide v-for="pet in petsStore.featuredPets" :key="pet.id">
+
+                <PetCard
+                    :id="pet.id"
+                    :petThumb="pet.thumb"
+                    :petType="pet.type"
+                    :petTypeSlug="pet.type_slug"
+                    :petName="pet.name"
+                    :petNameSlug="pet.name_slug"
+                    :petGender="pet.gender"
+                    :petGenderSlug="pet.gender_slug"
+                    :petAge="pet.age"
+                    :petAgeUnit="pet.age_unit"
+                    :petAgeSlug="pet.age_slug"
+                    :petDescription="pet.description"
+                    :petFeatured="pet.featured"
+                    :petAdopted="pet.adopted"
+                    @adopt="onAdopt"
+                />
+            
+        </swiper-slide>
+    </swiper>
+
+</template>
+
+<script setup>
+
+    /*
+    * Este carousel muestra las mascotas 
+    * y es reutilizado dependiendo si muestras
+    * mascotas relacionadas por Type (PetDetailView) o las mascotas destacadas (Home)
+    */
+    import { usePetsStore } from '@/stores/pets.store'
+    import { Swiper, SwiperSlide } from 'swiper/vue';
+    import { Autoplay, Pagination, Navigation } from 'swiper/modules'
+    import PetCard from '@/features/pets/components/PetCard.vue'
+
+    import 'swiper/css';
+    import 'swiper/css/pagination'
+    import 'swiper/css/navigation'
+
+    const swiperOpts = {
+        modules: [Autoplay, Pagination, Navigation],
+        navigation: true,
+        loop: true,
+        autoplay: {
+            delay: 6000,            
+            disableOnInteraction: true,
+            pauseOnMouseEnter: true,   
+        },
+        pagination: {
+            clickable: true,        
+            dynamicBullets: true,    
+        },
+        breakpoints: {
+            400: {
+            slidesPerView: 1,
+            spaceBetween: 0,
+            },
+            768: {
+            slidesPerView: 2,
+            spaceBetween: 15,
+            },
+            1200: {
+            slidesPerView: 3,
+            spaceBetween: 15,
+            },
+            1440: {
+            slidesPerView: 3,
+            spaceBetween: 15,
+            },
+        },
+    }
+
+    const petsStore = usePetsStore()
+
+</script>

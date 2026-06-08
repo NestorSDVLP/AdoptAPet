@@ -12,7 +12,7 @@
     "age_unit": "meses",
     "age_slug": "puppy",
     "description": "<p>Blackie es una cachorrita de 3 meses, pelaje negro brillante y mirada de bebé que enamora. Es chiquita pero con una energía que no le entra en el cuerpo. Está en esa edad hermosa de descubrir el mundo: morder juguetitos, correr atrás de su cola y quedarse dormida en 2 segundos panza arriba. Es súper sociable y se adapta a todo porque todavía es una esponja. Necesita una familia con tiempo y paciencia para enseñarle lo básico: hacer pis afuera, no morder zapatillas y que la correa es amiga. Si la adoptás ahora, crece con vos y van a ser inseparables. Blackie te promete años de juegos, mimos y ser la reina de la casa.</p>",
-    "featured": false,
+    "featured": true,
     "adopted": false
   },
   {
@@ -44,7 +44,7 @@
     "age_unit": "meses",
     "age_slug": "puppy",
     "description": "<p>Cromia es una gatita hembra de 3 meses que parece salida de un cuento. Tiene heterocromia: un ojito celeste y otro verde, como si tuviera dos pedacitos de cielo distintos mirándote. Es blanquita y con solo 3 meses ya se le nota que va a tener pelo largo y esponjoso. La cara que tiene es para morirse de ternura: carita chiquita, expresión curiosa y esas orejitas atentas a todo. Está en la edad de explorar cada rincón, jugar con cualquier hilito y después dormirse hecha un bollito. Es dulce, mansa y de esas que ronronean apenas las alzás. Como es chiquita se adapta súper fácil a depto, casa, chicos, otros animales. Cromia no pide mucho: una camita calentita, comidita rica y alguien que se quede bobo mirando sus ojitos de colores todo el día.</p>",
-    "featured": false,
+    "featured": true,
     "adopted": false
   },
   {
@@ -60,7 +60,7 @@
     "age_unit": "años",
     "age_slug": "senior",
     "description": "<p>Don Pedro es un señor perro de 10 años, macho, rescatado de la calle. Es negrito con pechito blanco y el hocico ya canoso, esas canas que le dan facha de sabio. Tiene unos ojos marrones brillantes que te miran como diciendo: Yo ya viví, yo ya sé. De raza no tiene pedigree: parece labrador pero es 100% calle, de los que se ganaron todo a pulm, y por eso vale doble. A sus 10 años ya no es cachorro revoltoso: es tranquilo, compañero, de los que se acuestan a tus pies y te cuidan sin hacer ruido. Sabe lo que es sufrir en la calle, así que cuando encuentra un hogar lo valora el triple. Es leal, agradecido y tiene ese amor sereno de los perros grandes. Don Pedro no pide juegos todo el día: pide respeto, una cuchita calentita y alguien que le rasque detrás de las orejas mientras mira la vida pasar. Adoptar a un adulto como él es darle la mejor etapa de su vida a quien más se lo merece.</p>",
-    "featured": false,
+    "featured": true,
     "adopted": false
   },
   {
@@ -108,7 +108,7 @@
     "age_unit": "años",
     "age_slug": "adult",
     "description": "<p>Francis es un gato macho de 5 años que parece mestizo, pero con toda la facha de siamés abandonado. Tiene pelo clarito, orejas negras y el hocico marrón chocolate oscuro, típico de los siameses. Pero lo que te roba el alma son sus ojos: celeste claro, transparentes, de esos que miran fijo y te dejan sin palabras. Es más delicado que los demás, de movimientos finos, elegante. Se nota que tiene sangre siamés porque son gatos que eligen a su humano y se pegan a él. Francis es de los que te siguen por la casa, te hablan con maullidos bajitos y se duermen pegados a vos. Con 5 años ya es un gato maduro, tranquilo, pero súper compañero. No pide lío, pide una familia que lo cuide como se merece, después de lo que le tocó vivir en la calle. Elegante, dulce y con esa mirada celeste que enamora.</p>",
-    "featured": false,
+    "featured": true,
     "adopted": false
   },
   {
@@ -140,7 +140,7 @@
     "age_unit": "meses",
     "age_slug": "puppy",
     "description": "<p>Helena es una gatita hembra de 3 meses, súper delicada y con una facha que parece de porcelana. Es atigrada pero clarita, clarita, con la típica M marcada en la frente que tienen todos los atigrados. Lo que más destaca son sus ojos grises: claros, expresivos, de gata atenta a todo lo que pasa. Y atenta es poco: Helena se la pasa en el jardín cazando mariposas y bichitos. Está en la edad de descubrir el mundo con la nariz y las patitas, agazapada, cola quieta, lista para saltar. Es dulce pero curiosa, de las que investigan cada hoja y cada flor. Con solo 3 meses ya tiene esa elegancia natural y esa mirada gris que te observa como diciendo: Yo mando acá. Es ideal para casa con patio o jardín donde pueda sacar su instinto de cazadora, pero también para depto con ventana, porque va a estar horas mirando el mundo afuera. Helena te promete ronroneos suaves y compañía tranquila.</p>",
-    "featured": false,
+    "featured": true,
     "adopted": false
   },
   {
@@ -172,7 +172,7 @@
     "age_unit": "años",
     "age_slug": "adult",
     "description": "<p>Lukas es un gato macho de 3 años, peludo y bigotudo como esos gatos nórdicos que aguantan el frío. Es una belleza total: pecho blanco, hocico blanco y el resto del cuerpo con un manto marrón clarito tipo ocre, súper elegante. Tiene esa cara llena de pelo que lo hace ver esponjoso y abrazable. Sus ojos son grises o verdes claritos, de esos que te miran con calma y sabiduría. Con 3 años ya es un gato maduro, tranquilo, pero con toda esa facha de gato salvaje de montaña. Es de los peludos que te dan ganas de enterrar la cara en el pecho. Ideal para alguien que ame cepillar y acurrucar gatos grandes de pelo largo. Lukas te promete compañía serena, ronroneos profundos y ser el rey peludo de la casa.</p>",
-    "featured": false,
+    "featured": true,
     "adopted": false
   },
   {

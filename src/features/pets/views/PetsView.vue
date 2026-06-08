@@ -1,6 +1,7 @@
 <template>
     
     <section class="py-5">
+        
         <div class="container">
             <h1>Refugio</h1>
             <hr class="mb-4">
@@ -52,5 +53,11 @@
     const petsStore = usePetsStore()
 
     const { breadcrumbs } = usePetFilters()
+
+    onMounted(async () => {
+
+        await petsStore.getPets()
+
+    })
 
 </script>

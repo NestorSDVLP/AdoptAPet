@@ -11,7 +11,20 @@
     <section :id="`detailInfoPet-${pet.id}`" v-if="pet">
         <div class="row g-5">
             <div class="col-6">
-                <img :src="pet.thumb" class="w-100" :alt="pet.name">                        
+                <div class="position-relative">
+
+                    <div v-if="pet.featured">
+                        <div class="position-absolute bg-primary text-dark py-1 px-2">
+                            <i class="bi bi-star-fill me-1"></i>
+                            <i class="bi bi-star-fill me-1"></i>
+                            <i class="bi bi-star-fill me-1"></i>
+                            <i class="bi bi-star-fill me-1"></i>
+                            <i class="bi bi-star-fill"></i>
+                        </div>
+                    </div>
+
+                    <img :src="pet.thumb" class="w-100" :alt="pet.name">
+                </div>
             </div>
             <div class="col-6">
                 <small class="opacity-50">{{ pet.type }}</small>

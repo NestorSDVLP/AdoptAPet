@@ -1,25 +1,21 @@
-<style scoped>
-
-/*
-* Estilos locales de la vista de detalle.
-*/
-
-</style>
-
 <template>
+
+    <section>
     
-    <section class="py-5">
-        <div class="container">
-            <h1>Refugio</h1>
-            <hr class="mb-4">
+        <section class="py-5">
+            <div class="container">
+                <h1>Refugio</h1>
+                <hr class="mb-4">
 
-            <div class="mb-4">
-                <AppBreadcrumbs :items="breadcrumbs"/>
+                <div class="mb-4">
+                    <AppBreadcrumbs :items="breadcrumbs"/>
+                </div>
+
+                <PetDetailInfo/>
+
             </div>
+        </section>
 
-            <PetDetailInfo/>
-
-        </div>
     </section>
 
 </template>
