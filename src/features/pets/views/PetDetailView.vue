@@ -16,6 +16,16 @@
             </div>
         </section>
 
+        <section class="pb-5">
+            <div class="container">
+                <h2>Mascotas relacionadas</h2>
+                <hr class="mb-4">
+
+                <PetsRelatedCarousel :pets="relatedPets"/>
+
+            </div>
+        </section>
+
     </section>
 
 </template>
@@ -34,6 +44,7 @@
     import { useRoute } from 'vue-router'
     import PetDetailInfo from '@/features/pets/components/PetDetailInfo.vue'
     import AppBreadcrumbs from '@/shared/components/AppBreadcrumbs.vue'
+    import PetsRelatedCarousel from '@/features/pets/components/PetsCarousel.vue'
 
     const route = useRoute()
 
@@ -89,6 +100,28 @@
         }
 
         return items
+
+    })
+
+    /*
+    * Colección de mascotas relacionadas por tipo (cats/dogs)
+    *
+    * Utilizada por carousel del Detalle de la mascota.
+    */
+
+    const relatedPets = computed(() => {
+
+        if (!pet.value) return []
+
+        return petsStore.pets.filter(item => {
+
+            return (
+                item.type_slug === pet.value.type_slug
+                &&
+                item.id !== pet.value.id
+            )
+
+        })
 
     })
 

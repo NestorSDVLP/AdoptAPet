@@ -1,7 +1,7 @@
 <template>
   
     <swiper v-bind="swiperOpts" class="pb-5">
-        <swiper-slide v-for="pet in petsStore.featuredPets" :key="pet.id">
+        <swiper-slide v-for="pet in props.pets" :key="pet.id">
 
                 <PetCard
                     :id="pet.id"
@@ -75,6 +75,13 @@
         },
     }
 
-    const petsStore = usePetsStore()
+    const props = defineProps({
+        pets: {
+            type: Array,
+            default: () => []
+        }
+    })
+
+    //const petsStore = usePetsStore()
 
 </script>

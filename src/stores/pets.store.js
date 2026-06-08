@@ -176,9 +176,9 @@ export const usePetsStore = defineStore('pets', () => {
     }
 
     /*
-    * Colección de mascotas adoptadas.
+    * Colección de mascotas destacadas.
     *
-    * Utilizada por el offcanvas del header.
+    * Utilizada por carousel del Home.
     */
 
     const featuredPets = computed(() => {

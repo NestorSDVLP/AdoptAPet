@@ -1,32 +1,46 @@
 <template>
+
+    <section>
     
-    <section class="py-5">
-        
-        <div class="container">
-            <h1>Refugio</h1>
-            <hr class="mb-4">
+        <section class="py-5">
             
-            <div class="d-flex align-items-center justify-content-between mb-4">
+            <div class="container">
+                <h1>Refugio</h1>
+                <hr class="mb-4">
+                
+                <div class="d-flex align-items-center justify-content-between mb-4">
 
-                <AppBreadcrumbs :items="breadcrumbs"/>
+                    <AppBreadcrumbs :items="breadcrumbs"/>
 
-                <PetFilteredCount :count="petsStore.filteredPets.length"/>
-
-            </div>
-
-            <div class="row g-4">
-                <div class="col-3">
-
-                    <PetFilters/>
-                    
-                </div>
-                <div class="col-9">
-
-                    <PetList/>
+                    <PetFilteredCount :count="petsStore.filteredPets.length"/>
 
                 </div>
+
+                <div class="row g-4">
+                    <div class="col-3">
+
+                        <PetFilters/>
+                        
+                    </div>
+                    <div class="col-9">
+
+                        <PetList/>
+
+                    </div>
+                </div>
             </div>
-        </div>
+        </section>
+
+        <section class="pb-5">
+            <div class="container">
+                <h2>Mascotas destacadas</h2>
+                <hr class="mb-4">
+
+                <PetsFeaturedCarousel :pets="petsStore.relatedPets"/>
+
+            </div>
+        </section>
+
     </section>
 
 </template>

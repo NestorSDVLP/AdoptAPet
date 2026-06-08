@@ -26,7 +26,7 @@
                 <h2>Mascotas destacadas</h2>
                 <hr class="mb-4">
 
-                <PetsFeaturedCarousel/>
+                <PetsFeaturedCarousel :pets="petsStore.featuredPets"/>
 
             </div>
         </section>
