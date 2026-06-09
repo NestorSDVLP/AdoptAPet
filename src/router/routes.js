@@ -12,6 +12,7 @@ import { createRouter, createWebHistory } from 'vue-router'
 import HomeView from '@/features/home/views/HomeView.vue'
 import PetsView from '@/features/pets/views/PetsView.vue'
 import PetDetailView from '@/features/pets/views/PetDetailView.vue'
+import LoginView from '@/features/auth/views/LoginView.vue'
 
 /*
 * Definición del mapa de navegación.
@@ -44,7 +45,13 @@ const routes = [
         path: '/pet/:slug',
         name: 'pet',
         component: PetDetailView
-    }
+    },
+    {
+        path: '/login',
+        name: 'login',
+        component: LoginView
+    },
+
 ]
 
 /*
