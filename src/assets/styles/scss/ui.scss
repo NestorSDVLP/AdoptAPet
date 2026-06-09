@@ -1,3 +1,8 @@
+/*
+
+    MainHeader
+
+*/
 #mainHeader {
     .navbar {
         .navbar-brand {
@@ -8,10 +13,20 @@
     }
 }
 
+/*
+
+    Sidebar Filter Sticky
+
+*/
 .sidebar-sticky-top {
     top: 100px;
 }
 
+/*
+
+    ListGroup
+
+*/
 .list-group {
     &.list-has-chevron {
         .list-group-item-action {
@@ -43,6 +58,11 @@
     }
 }
 
+/*
+
+    Buttons Global
+
+*/
 .btn {
     position: relative;
 
@@ -61,6 +81,11 @@
     }
 }
 
+/*
+
+    Breadcrumbs Views
+
+*/
 .breadcrumb {
     .breadcrumb-item {
         a {
@@ -70,6 +95,11 @@
     }
 }
 
+/*
+
+    Pagination List
+
+*/
 .pagination {
     .page-item {
         .page-link {
@@ -80,6 +110,11 @@
     }
 }
 
+/*
+
+    Swiper Carousel
+
+*/
 .swiper {
   /* solo este carrusel */
   --swiper-theme-color: #{$primary};
@@ -96,4 +131,41 @@
 
   /* tamaño de flechas */
   --swiper-navigation-size: 30px;
+}
+
+/*
+
+    FAB Adopted Count
+
+*/
+.fab-adopted-count {
+    position: fixed;
+    z-index: 9;
+    pointer-events: auto;
+    bottom: 15px;
+    left: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60px;
+    height: 60px;
+    border-radius: 100%;
+    background-color: $primary;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+
+    .logo {
+        width: 36px;
+    }
+
+    .badge {
+        position: absolute;
+        top: 5px;
+        right: 5px;
+        transform: translate(50%,-50%);
+    }
+
+    @media (min-width: 780px) {
+        display: none;
+        pointer-events: none;
+    }
 }
