@@ -6,7 +6,7 @@
 
     <div v-else>
 
-        <div class="row g-4">
+        <div class="row g-2 g-lg-4">
 
             <div v-for="pet in paginatedPets" :key="pet.id" :id="pet.id" class="col-sm-6">
             

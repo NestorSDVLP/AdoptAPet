@@ -2,7 +2,7 @@
 
     <nav>
 
-        <ol class="breadcrumb align-items-center">
+        <ol class="breadcrumb align-items-center m-0">
 
             <li v-for="item in items" :key="item.label" class="breadcrumb-item">
 

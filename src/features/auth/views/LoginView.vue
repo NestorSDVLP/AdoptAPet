@@ -7,21 +7,22 @@
                 <h1>Ingresar</h1>
                 <hr class="mb-4">
                 <div class="row justify-content-center">
-                    <div class="col-4">
-                        <div class="bg-primary box-shadow p-5">
+                    <div class="col-sm-8 col-lg-4">
+                        <div class="bg-primary box-shadow px-4 py-5 p-sm-5">
                             <form @submit.prevent="handleLogin">
                                 <div class="row justify-content-center">
-                                    <div class="col-4">
+                                    <div class="col-5 col-sm-4">
                                         <img src="@/assets/images/logo.svg" class="w-100 mb-4">
                                     </div>
                                 </div>
-                                <h4 class="h4 text-center mb-4">Completá tus <br>datos de ingreso</h4>
+                                <h4 class="h4 text-center mb-1">Ingresá a AdoptAPet&reg; para adoptar tu nuevo amigo</h4>
+                                <p class="text-center opacity-75 mb-4">Completá tus datos de ingreso</p>
                                 <div class="form-floating mb-3">
                                     <input v-model="email" type="email" class="form-control" id="inputEmail" placeholder="name@example.com">
                                     <label for="inputEmail">E-mail</label>
                                 </div>
                                 <div class="form-floating mb-3">
-                                    <input v-model="password" type="text" class="form-control" id="inputPassword" placeholder="Contraseña">
+                                    <input v-model="password" type="password" class="form-control" id="inputPassword" placeholder="Contraseña">
                                     <label for="inputPassword">Contraseña</label>
                                 </div>
                                 <p>¿No tenés cuenta? <a href="#" class="btn-link text-dark text-decoration-none h6">Registrate ahora <i class="bi bi-chevron-right"></i></a></p>

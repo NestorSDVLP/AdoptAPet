@@ -9,8 +9,8 @@
 <template>
 
     <section :id="`detailInfoPet-${pet.id}`" v-if="pet">
-        <div class="row g-5">
-            <div class="col-6">
+        <div class="row justify-content-center g-3 g-lg-5">
+            <div class="col-sm-8 col-lg-6">
                 <div class="position-relative">
 
                     <div v-if="pet.featured">
@@ -26,7 +26,7 @@
                     <img :src="pet.thumb" class="w-100" :alt="pet.name">
                 </div>
             </div>
-            <div class="col-6">
+            <div class="col-sm-8 col-lg-6">
                 <small class="opacity-50">{{ pet.type }}</small>
                 <h2>{{ pet.name }}</h2>
                 <div class="row">
@@ -42,7 +42,7 @@
                 <article class="opacity-75 mt-4 mb-5" v-html="pet.description"></article>
 
                 <div class="row">
-                    <div class="col-sm-5">
+                    <div class="col-8 col-sm-6 col-lg-5">
                         <button type="button" class="btn-adopt btn btn-primary btn-lg rounded-pill w-100" @click="adoptPet">
                             <i class="bi bi-check-circle-fill"></i> {{ adopted ? 'Adoptado' : 'Adoptar' }}
                         </button>

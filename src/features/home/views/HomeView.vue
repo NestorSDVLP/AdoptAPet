@@ -5,14 +5,17 @@
         <section class="py-5">
             <div class="container">
                 <div class="card text-bg-dark box-shadow">
-                    <img src="@/assets/images/hero.webp" class="card-img" alt="...">
+
+                    <img src="@/assets/images/hero_lg.webp" class="card-img d-none d-lg-block" alt="Vos les das tu casa y ellos te dan su corazón">
+                    <img src="@/assets/images/hero_sm.webp" class="card-img d-block d-lg-none" alt="Vos les das tu casa y ellos te dan su corazón">
+
                     <div class="card-img-overlay d-flex align-items-end" style="background: rgba(0,0,0,.4);">
-                        <div class="w-100 p-5">
+                        <div class="w-100 p-3 p-sm-5">
                             <div class="row justify-content-center">
                                 <div class="col-lg-7 text-center">
-                                    <h1 class="lh-1 mb-2">Vos les das tu casa <br>y ellos te dan su corazón</h1>
-                                    <p class="mb-4">Alguien te espera para quererte sin condiciones. <br>Abrí tu casa, abrí tu corazón. <strong>Adoptá.</strong></p>
-                                    <router-link class="btn btn-primary rounded-pill px-5" to="/pets">Ver Refugio <i class="bi bi-chevron-right"></i></router-link>
+                                    <h1 class="lh-1 mb-2">Vos les das tu casa <br class="d-none d-sm-block">y ellos te dan su corazón</h1>
+                                    <p class="mb-0 mb-sm-4">Alguien te espera para quererte sin condiciones. <br class="d-none d-sm-block">Abrí tu casa, abrí tu corazón. <strong>Adoptá.</strong></p>
+                                    <router-link class="btn btn-primary rounded-pill px-5 d-none d-sm-inline-block" to="/pets">Ver Refugio <i class="bi bi-chevron-right"></i></router-link>
                                 </div>
                             </div>
                         </div>

@@ -6,7 +6,7 @@
                 <router-link class="navbar-brand text-dark" to="/">
                     <div class="d-flex align-items-center">
                         <img src="@/assets/images/logo.svg" class="logo me-2">
-                        <h1 class="h2 m-0">Adopt a Pet&reg;</h1>
+                        <h1 class="h2 m-0">AdoptAPet&reg;</h1>
                     </div>
                 </router-link>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
@@ -15,7 +15,7 @@
             <div class="collapse navbar-collapse" id="mainNav">
                 <ul class="navbar-nav align-items-center ms-auto me-0">
                     <li class="nav-item">
-                        <router-link class="nav-link text-dark active" to="/">Home</router-link>
+                        <router-link class="nav-link text-dark active" to="/">Inicio</router-link>
                     </li>
                     <li class="nav-item">
                         <router-link class="nav-link text-dark" to="/pets">Refugio</router-link>
@@ -26,7 +26,7 @@
                     </li>
 
                     <li v-if="authStore.isAuthenticated" class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle text-dark" href="#" role="button" data-bs-toggle="dropdown">Hola, {{ authStore.user.email.split('@')[0] }} <i class="bi bi-chevron-down ms-1"></i></a>
+                        <a class="nav-link dropdown-toggle text-dark" href="#" role="button" data-bs-toggle="dropdown"><i class="bi bi-person-fill opacity-50"></i> Hola, {{ authStore.user.email.split('@')[0] }} <i class="bi bi-chevron-down ms-1"></i></a>
                         <ul class="dropdown-menu dropdown-menu-end border-0 box-shadow">
                             <li>
                                 <button class="dropdown-item" @click="handleLogout">Salir</button>
