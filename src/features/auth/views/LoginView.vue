@@ -1,71 +1,194 @@
 <template>
+  <section>
+    <section class="py-5">
+      <div class="container">
+        <h1>Ingresar</h1>
+        <hr class="mb-4">
+        <div class="row justify-content-center">
+          <div class="col-sm-8 col-lg-4">
+            <div class="bg-primary box-shadow px-4 py-5 p-sm-5">
+              
+              <div v-if="errorFirebase" class="alert alert-danger text-center mb-4 small" role="alert">
+                <i class="bi bi-exclamation-triangle-fill me-2"></i>
+                {{ errorFirebase }}
+              </div>
 
-    <section>
-
-        <section class="py-5">
-            <div class="container">
-                <h1>Ingresar</h1>
-                <hr class="mb-4">
+              <form novalidate @submit.prevent="handleLogin">
+                
                 <div class="row justify-content-center">
-                    <div class="col-sm-8 col-lg-4">
-                        <div class="bg-primary box-shadow px-4 py-5 p-sm-5">
-                            <form @submit.prevent="handleLogin">
-                                <div class="row justify-content-center">
-                                    <div class="col-5 col-sm-4">
-                                        <img src="@/assets/images/logo.svg" class="w-100 mb-4">
-                                    </div>
-                                </div>
-                                <h4 class="h4 text-center mb-1">Ingresá a AdoptAPet&reg; para adoptar tu nuevo amigo</h4>
-                                <p class="text-center opacity-75 mb-4">Completá tus datos de ingreso</p>
-                                <div class="form-floating mb-3">
-                                    <input v-model="email" type="email" class="form-control" id="inputEmail" placeholder="name@example.com">
-                                    <label for="inputEmail">E-mail</label>
-                                </div>
-                                <div class="form-floating mb-3">
-                                    <input v-model="password" type="password" class="form-control" id="inputPassword" placeholder="Contraseña">
-                                    <label for="inputPassword">Contraseña</label>
-                                </div>
-                                <p>¿No tenés cuenta? <a href="#" class="btn-link text-dark text-decoration-none h6">Registrate ahora <i class="bi bi-chevron-right"></i></a></p>
-                                <button class="btn btn-dark w-100 py-2" type="submit">Ingresar</button> 
-                            </form>
-                        </div>
-                    </div>
+                  <div class="col-5 col-sm-4">
+                    <img src="@/assets/images/logo.svg" class="w-100 mb-4">
+                  </div>
                 </div>
+                <h4 class="h4 text-center mb-1">Ingresá a AdoptAPet&reg; para adoptar tu nuevo amigo</h4>
+                <p class="text-center opacity-75 mb-4">Completá tus datos de ingreso</p>
+                
+                <div class="form-floating mb-3">
+                  <input 
+                    v-model="email" 
+                    type="email" 
+                    class="form-control" 
+                    :class="{ 'is-invalid': emailError }"
+                    id="inputEmail" 
+                    placeholder="name@example.com"
+                  >
+                  <label for="inputEmail">E-mail</label>
+                  <div class="invalid-feedback">{{ emailError }}</div>
+                </div>
+
+                <div class="form-floating mb-3">
+                  <input 
+                    v-model="password" 
+                    type="password" 
+                    class="form-control" 
+                    :class="{ 'is-invalid': passwordError }"
+                    id="inputPassword" 
+                    placeholder="Contraseña"
+                  >
+                  <label for="inputPassword">Contraseña</label>
+                  <div class="invalid-feedback">{{ passwordError }}</div>
+                </div>
+
+                <button class="btn btn-dark w-100 py-2" type="submit" :disabled="loading">
+                    {{ loading ? 'Ingresando...' : 'Ingresar' }}
+                </button>
+              </form>
+
             </div>
-        </section>
-
+          </div>
+        </div>
+      </div>
     </section>
-
+  </section>
 </template>
 
 <script setup>
 
-import { ref } from 'vue'
-import { useRouter } from 'vue-router'
+    import { ref, computed } from 'vue'
+    import { useRouter } from 'vue-router'
+    import { useAuthStore } from '@/features/auth/store/auth.store'
 
-import { useAuthStore } from '@/features/auth/store/auth.store'
+    /*
+    *
+    * Inicialización de dependencias y servicios
+    * 
+    */
 
-const authStore = useAuthStore()
-const router = useRouter()
+    const authStore = useAuthStore() // Instancia del store global de Pinia
+    const router = useRouter()       // Instancia del enrutador de Vue Router
 
-const email = ref('')
-const password = ref('')
+    /*
+    *
+    * Estado reactivo local (estado del formulario)
+    * 
+    */
 
-const handleLogin = async () => {
+    const email = ref('')          // Almacena el texto que escribe el usuario en el input de email
+    const password = ref('')       // Almacena la contraseña escrita
+    const enviado = ref(false)     // Controla si el usuario ya intentó clickear el botón "Ingresar"
+    const errorFirebase = ref('')  // Almacena los mensajes de error que regresan del backend (Firebase)
 
-  try {
-    const result = await authStore.loginUser(email.value, password.value)
+    // Expresión regular estándar para verificar estructuras válidas de correo (ej: usuario@dominio.com)
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
 
-    console.log('LOGIN OK:', result.user)
+    /*
+    *
+    * Propiedades computadas (validación en tiempo real)
+    * 
+    */
 
-    router.push('/')
+    /*
+    * Evaluación del campo E-mail.
+    * Escucha los cambios de 'enviado' y 'email'. Si hay fallas, retorna el string con el error.
+    */
 
-  } catch (error) {
+    const emailError = computed(() => {
+        if (!enviado.value) return '' // No molestamos al usuario con errores rojos apenas entra a la vista
+        if (!email.value.trim()) return 'Ingresá un E-mail.' // Validación de campo vacío
+        if (!emailRegex.test(email.value)) return 'Ingresá un E-mail válido.' // Validación de formato técnico
+        return '' // Si pasa todos los filtros, no hay error
+    })
 
-    console.error('LOGIN ERROR:', error.code, error.message)
+    /*
+    *
+    * Evaluación del campo Contraseña.
+    * Verifica reglas mínimas de seguridad en el cliente antes de procesar el login.
+    * 
+    */
 
-  }
+    const passwordError = computed(() => {
+        if (!enviado.value) return '' // Oculto hasta que se intente el primer envío
+        if (!password.value) return 'Tu contraseña es un campo requerido.' // Validación de campo vacío
+        if (password.value.length < 6) return 'La contraseña debe tener al menos 6 caracteres.' // Regla mínima de Firebase
+        return '' // Sin errores
+    })
 
-}
+    /*
+    *
+    * Lógica de control y envío (método principal)
+    * 
+    */
+
+    const loading = ref(false)
+
+    const handleLogin = async () => {
+        enviado.value = true       // Activamos el flag de envío para que las computed muestren los errores si los hay
+        loading.value = true
+        errorFirebase.value = ''   // Limpiamos cualquier error de Firebase de intentos fallidos anteriores
+
+        /*
+        * Primera línea de defensa (front-end / cliente)
+        * Si alguna de las propiedades computadas devuelve texto de error, frenamos la ejecución.
+        * De esta manera evitamos hacer peticiones de red innecesarias a Firebase con datos que ya sabemos que están mal.
+        */
+
+        if (emailError.value || passwordError.value) {
+            loading.value = false
+            return
+        }
+
+        /*
+        * Segunda línea de defensa (back-end / servidor)
+        * Si el formulario local es válido, procedemos a comunicarnos con el store de Pinia.
+        */
+
+        try {
+            // Despachamos la acción asíncrona hacia el servicio que maneja el SDK de Firebase Auth
+            const result = await authStore.loginUser(email.value, password.value)
+            
+            console.log('LOGIN OK:', result.user)
+            
+            // Si las credenciales son válidas, Vue Router nos redirige al Home de la App
+            router.push('/')
+            
+        } catch (error) {
+
+            // Si las credenciales fallan, Firebase arroja una excepción que atrapamos en este bloque catch
+            console.error('LOGIN ERROR:', error.code, error.message)
+            
+            /*
+            * Traductor de códigos de error
+            * Mapeamos las respuestas técnicas nativas de Firebase ('error.code')
+            * a cadenas de texto amigables en español para que el usuario sepa qué pasó.
+            */
+
+            switch (error.code) {
+                case 'auth/invalid-credential':
+                    errorFirebase.value = 'El correo electrónico o la contraseña son incorrectos.'
+                    break;
+                case 'auth/user-disabled':
+                    errorFirebase.value = 'Esta cuenta ha sido deshabilitada por el administrador.'
+                    break;
+                case 'auth/too-many-requests':
+                    errorFirebase.value = 'Demasiados intentos fallidos. Intentá de nuevo más tarde.'
+                    break;
+                default:
+                    errorFirebase.value = 'Ocurrió un error al intentar ingresar. Revisá tu conexión.'
+            }
+        } finally {
+            loading.value = false
+        }
+        
+    }
 
 </script>
