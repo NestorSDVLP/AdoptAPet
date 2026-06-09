@@ -20,7 +20,13 @@
                     <li class="nav-item">
                         <router-link class="nav-link text-dark" to="/pets">Refugio</router-link>
                     </li>
-                    <li class="nav-item">
+                    <li class="nav-item ms-2">
+                        <router-link class="nav-link text-dark" to="/login"><i class="bi bi-person-fill opacity-50"></i> Ingresar</router-link>
+                    </li>
+                    <li class="nav-item ms-2">
+                        <p class="m-0"><pre>{{ authStore.user }}</pre></p>
+                    </li>
+                    <li class="nav-item ms-2">
                         <a class="nav-link " href="#" data-bs-toggle="offcanvas" data-bs-target="#offcanvasAdoptedPets">
                             <span class="d-flex-inline align-items-center">
                                 Adoptados <span class="badge text-bg-dark rounded-pill ms-1">{{ petsCount }}</span>
@@ -45,8 +51,11 @@
   */
 
   import { computed } from 'vue'
+  import { useAuthStore } from '@/features/auth/store/auth.store'
 
   import AppHeaderAdoptedOffcanvas from '@/shared/components/AppHeaderAdoptedOffcanvas.vue'
+
+  const authStore = useAuthStore()
 
   /*
   * Acceso al estado global de mascotas.
