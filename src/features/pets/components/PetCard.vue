@@ -35,17 +35,22 @@
             </div>
             <article class="clamp-4 opacity-75" v-html="petDescription"></article>
         </div>
-        <div class="card-footer bg-transparent border-top-0">
-            <div class="row g-3">
+        <div class="card-footer bg-transparent border-top-0 pb-4">
+            <div class="row g-3 align-items-center">
                 <div class="col-6">
                     <router-link :to="{ name: 'pet', params: { slug: petNameSlug } }" class="btn-learnmore btn btn-outline-dark rounded-pill w-100">
                         Conocer más <i class="bi bi-chevron-right"></i>
                     </router-link>
                 </div>
                 <div class="col-6">
-                    <button type="button" class="btn-adopt btn btn-primary rounded-pill w-100" @click="adoptPet">
-                        <i class="bi bi-check-circle-fill"></i>  {{ petAdopted ? 'Adoptado' : 'Adoptar' }}
-                    </button>
+                    <div v-if="authStore.isAuthenticated"">
+                        <button type="button" class="btn-adopt btn btn-primary rounded-pill w-100" @click="adoptPet">
+                            <i class="bi bi-check-circle-fill"></i>  {{ petAdopted ? 'Adoptado' : 'Adoptar' }}
+                        </button>
+                    </div>
+                    <div v-else>
+                        <p class="small lh-sm opacity-50 m-0">Ingresá Para <h6 class="d-inline m-0">adoptar <br>una mascota</h6></p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -54,6 +59,10 @@
 </template>
 
 <script setup>
+
+    import { useAuthStore } from '@/features/auth/store/auth.store'
+
+    const authStore = useAuthStore()
 
     /*
     * Define los eventos personalizados que este componente

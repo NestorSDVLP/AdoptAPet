@@ -20,13 +20,21 @@
                     <li class="nav-item">
                         <router-link class="nav-link text-dark" to="/pets">Refugio</router-link>
                     </li>
-                    <li class="nav-item ms-2">
+
+                    <li v-if="!authStore.isAuthenticated" class="nav-item ms-2">
                         <router-link class="nav-link text-dark" to="/login"><i class="bi bi-person-fill opacity-50"></i> Ingresar</router-link>
                     </li>
-                    <li class="nav-item ms-2">
-                        <p class="m-0"><pre>{{ authStore.user }}</pre></p>
+
+                    <li v-if="authStore.isAuthenticated" class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle text-dark" href="#" role="button" data-bs-toggle="dropdown">Hola, {{ authStore.user.email.split('@')[0] }} <i class="bi bi-chevron-down ms-1"></i></a>
+                        <ul class="dropdown-menu dropdown-menu-end border-0 box-shadow">
+                            <li>
+                                <button class="dropdown-item" @click="handleLogout">Salir</button>
+                            </li>
+                        </ul>
                     </li>
-                    <li class="nav-item ms-2">
+
+                    <li class="nav-item">
                         <a class="nav-link " href="#" data-bs-toggle="offcanvas" data-bs-target="#offcanvasAdoptedPets">
                             <span class="d-flex-inline align-items-center">
                                 Adoptados <span class="badge text-bg-dark rounded-pill ms-1">{{ petsCount }}</span>
@@ -46,30 +54,34 @@
 
 <script setup>
 
-  /*
-  * Utilidades reactivas utilizadas por el layout.
-  */
+    /*
+    * Utilidades reactivas utilizadas por el layout.
+    */
 
-  import { computed } from 'vue'
-  import { useAuthStore } from '@/features/auth/store/auth.store'
+    import { computed } from 'vue'
+    import { useAuthStore } from '@/features/auth/store/auth.store'
 
-  import AppHeaderAdoptedOffcanvas from '@/shared/components/AppHeaderAdoptedOffcanvas.vue'
+    import AppHeaderAdoptedOffcanvas from '@/shared/components/AppHeaderAdoptedOffcanvas.vue'
 
-  const authStore = useAuthStore()
+    const authStore = useAuthStore()
 
-  /*
-  * Acceso al estado global de mascotas.
-  */
+    /*
+    * Acceso al estado global de mascotas.
+    */
 
-  import { usePetsStore } from '@/stores/pets.store'
+    import { usePetsStore } from '@/stores/pets.store'
 
-  /*
-  * Computed que expone el total de mascotas
-  * adoptadas para el contador del header.
-  */
+    /*
+    * Computed que expone el total de mascotas
+    * adoptadas para el contador del header.
+    */
 
-  const petsStore = usePetsStore()
+    const petsStore = usePetsStore()
 
-  const petsCount = computed(() => petsStore.adoptedCount)
+    const petsCount = computed(() => petsStore.adoptedCount)
+
+    const handleLogout = async () => {
+        await authStore.logoutUser()
+    }
 
 </script>

@@ -2,7 +2,7 @@ import { defineStore } from 'pinia'
 import { ref, computed } from 'vue'
 
 import { onAuthStateChanged } from 'firebase/auth'
-import { auth } from '@/features/auth/services/auth.service'
+import { auth, login, logout } from '@/features/auth/services/auth.service'
 
 export const useAuthStore = defineStore('auth', () => {
 
@@ -23,6 +23,21 @@ export const useAuthStore = defineStore('auth', () => {
     })
 
     /*
+    * XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+    */
+
+    const loadingAuth = ref(true)
+
+    /*
+    * XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+    */
+
+    onAuthStateChanged(auth, (firebaseUser) => {
+        user.value = firebaseUser
+        loadingAuth.value = false
+    })
+
+    /*
     * Inicializa el listener de Firebase Auth.
     */
 
@@ -36,6 +51,21 @@ export const useAuthStore = defineStore('auth', () => {
 
     }
 
+    const loginUser = async (email, password) => {
+
+        return await login(
+            email,
+            password
+        )
+
+    }
+
+    const logoutUser = async () => {
+
+        await logout()
+
+    }
+
     /*
     * API pública.
     */
@@ -43,7 +73,9 @@ export const useAuthStore = defineStore('auth', () => {
     return {
         user,
         isAuthenticated,
-        initAuth
+        initAuth,
+        loginUser,
+        logoutUser
     }
 
 })
