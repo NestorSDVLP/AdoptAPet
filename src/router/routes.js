@@ -66,6 +66,39 @@ const router = createRouter({
 })
 
 /*
+* Importación del store de UI para controlar el loader de navegación.
+*/
+
+import { useUiStore } from '@/shared/stores/ui.store'
+
+/*
+* Navigation Guards para activar y desactivar el loader global.
+*/
+
+/*router.beforeEach((to, from) => {
+    const uiStore = useUiStore()
+    uiStore.setLoading(true)
+})*/
+
+router.beforeEach(async (to, from) => {
+    const uiStore = useUiStore()
+    uiStore.setLoading(true)
+    
+    // Simula una demora de 1500ms para poder ver el diseño del spinner
+    await new Promise(resolve => setTimeout(resolve, 1500))
+})
+
+router.afterEach(() => {
+    const uiStore = useUiStore()
+    uiStore.setLoading(false)
+})
+
+router.onError(() => {
+    const uiStore = useUiStore()
+    uiStore.setLoading(false)
+})
+
+/*
 * Exporta el router para ser registrado
 * en la aplicación principal.
 */

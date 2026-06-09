@@ -15,6 +15,29 @@
 
 /*
 
+   Loading Global (AppLoading)
+
+*/
+.app-loading-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.75); /* Fondo oscuro con opacidad */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999990;
+
+    .app-loading-spinner {
+    width: 3.5rem;
+    height: 3.5rem;
+    }
+}
+
+/*
+
     Sidebar Filter Sticky
 
 */

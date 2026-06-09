@@ -1,5 +1,7 @@
 <template>
 
+  <AppLoading />
+
   <AppHeader/>
 
   <main class="pt-5">
@@ -29,5 +31,6 @@
 
   import AppHeader from '@/shared/components/AppHeader.vue'
   import AppFooter from '@/shared/components/AppFooter.vue'
+  import AppLoading from '@/shared/components/AppLoading.vue'
 
 </script>

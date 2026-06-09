@@ -5,7 +5,7 @@
         <h1>Ingresar</h1>
         <hr class="mb-4">
         <div class="row justify-content-center">
-          <div class="col-sm-8 col-lg-4">
+          <div class="col-sm-8 col-lg-5 col-xxl-4">
             <div class="bg-primary box-shadow px-4 py-5 p-sm-5">
               
               <div v-if="errorFirebase" class="alert alert-danger text-center mb-4 small" role="alert">
@@ -49,9 +49,24 @@
                   <div class="invalid-feedback">{{ passwordError }}</div>
                 </div>
 
-                <button class="btn btn-dark w-100 py-2" type="submit" :disabled="loading">
+                <!--<button class="btn btn-dark w-100 py-2" type="submit" :disabled="loading">
                     {{ loading ? 'Ingresando...' : 'Ingresar' }}
+                </button>-->
+
+                <!-- Mostrar un spiner mientras se procesa el loging -->
+                <button class="btn btn-dark w-100 py-2" type="submit" :disabled="loading">
+
+                  <template v-if="loading">
+                    <span class="spinner-border spinner-border-sm me-2" role="status" aria-hidden="true"></span>
+                    Ingresando...
+                  </template>
+
+                  <template v-else>
+                    Ingresar
+                  </template>
+
                 </button>
+
               </form>
 
             </div>
