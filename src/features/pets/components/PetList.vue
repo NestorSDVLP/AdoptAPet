@@ -53,7 +53,7 @@
     import PetCard from '@/features/pets/components/PetCard.vue'
     import AppPagination from '@/shared/components/AppPagination.vue'
     import { usePetFilters } from '@/features/pets/composables/usePetsFilters.js'
-    import { usePetsStore } from '@/stores/pets.store'
+    import { usePetsStore } from '@/features/pets/stores/pets.store'
     import PetListEmpty from '@/features/pets/components/PetListEmpty.vue'
 
     /*

@@ -75,17 +75,12 @@ import { useUiStore } from '@/shared/stores/ui.store'
 * Navigation Guards para activar y desactivar el loader global.
 */
 
-/*router.beforeEach((to, from) => {
-    const uiStore = useUiStore()
-    uiStore.setLoading(true)
-})*/
-
 router.beforeEach(async (to, from) => {
     const uiStore = useUiStore()
     uiStore.setLoading(true)
     
-    // Simula una demora de 1500ms para poder ver el diseño del spinner
-    await new Promise(resolve => setTimeout(resolve, 1500))
+    // Simula una demora de 250ms para poder ver el diseño del spinner *****************************
+    await new Promise(resolve => setTimeout(resolve, 250))
 })
 
 router.afterEach(() => {

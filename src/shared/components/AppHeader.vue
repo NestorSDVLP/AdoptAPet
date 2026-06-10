@@ -21,7 +21,7 @@
                         <router-link class="nav-link text-dark" to="/pets">Refugio</router-link>
                     </li>
 
-                    <li v-if="!authStore.isAuthenticated" class="nav-item ms-2">
+                    <li v-if="!authStore.isAuthenticated" class="nav-item">
                         <router-link class="nav-link text-dark" to="/login"><i class="bi bi-person-fill opacity-50"></i> Ingresar</router-link>
                     </li>
 
@@ -69,7 +69,7 @@
     * Acceso al estado global de mascotas.
     */
 
-    import { usePetsStore } from '@/stores/pets.store'
+    import { usePetsStore } from '@/features/pets/stores/pets.store'
 
     /*
     * Computed que expone el total de mascotas

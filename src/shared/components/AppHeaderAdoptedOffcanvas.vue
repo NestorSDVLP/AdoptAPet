@@ -67,7 +67,7 @@
     * de mascotas adoptadas y su detalle.
     */
 
-    import { usePetsStore } from '@/stores/pets.store'
+    import { usePetsStore } from '@/features/pets/stores/pets.store'
 
     const petsStore = usePetsStore()
 

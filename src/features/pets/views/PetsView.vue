@@ -75,7 +75,7 @@
     import PetList from '@/features/pets/components/PetList.vue'
     import PetFilters from '@/features/pets/components/filters/PetFilters.vue'
     import { usePetFilters } from '@/features/pets/composables/usePetsFilters'
-    import { usePetsStore } from '@/stores/pets.store'
+    import { usePetsStore } from '@/features/pets/stores/pets.store'
 
     const petsStore = usePetsStore()
 

@@ -31,7 +31,7 @@ import App from '@/App.vue'
 * Configuración global de rutas.
 */
 
-import router from '@/router/routes.js'
+import router from '@/router/router.js'
 
 /*
 * Store de autenticación.

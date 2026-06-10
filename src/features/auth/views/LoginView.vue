@@ -5,7 +5,7 @@
         <h1>Ingresar</h1>
         <hr class="mb-4">
         <div class="row justify-content-center">
-          <div class="col-sm-8 col-lg-5 col-xxl-4">
+          <div class="col-sm-8 col-lg-5">
             <div class="bg-primary box-shadow px-4 py-5 p-sm-5">
               
               <div v-if="errorFirebase" class="alert alert-danger text-center mb-4 small" role="alert">
@@ -30,28 +30,26 @@
                     class="form-control" 
                     :class="{ 'is-invalid': emailError }"
                     id="inputEmail" 
-                    placeholder="name@example.com"
+                    placeholder="E-mail *"
                   >
-                  <label for="inputEmail">E-mail</label>
+                  <label for="inputEmail">E-mail *</label>
                   <div class="invalid-feedback">{{ emailError }}</div>
                 </div>
 
-                <div class="form-floating mb-3">
+                <div class="form-floating mb-2">
                   <input 
                     v-model="password" 
                     type="password" 
                     class="form-control" 
                     :class="{ 'is-invalid': passwordError }"
                     id="inputPassword" 
-                    placeholder="Contraseña"
+                    placeholder="Contraseña *"
                   >
-                  <label for="inputPassword">Contraseña</label>
+                  <label for="inputPassword">Contraseña *</label>
                   <div class="invalid-feedback">{{ passwordError }}</div>
                 </div>
 
-                <!--<button class="btn btn-dark w-100 py-2" type="submit" :disabled="loading">
-                    {{ loading ? 'Ingresando...' : 'Ingresar' }}
-                </button>-->
+                <p class="small opacity-75 mb-3">(*) Datos requeridos</p>
 
                 <!-- Mostrar un spiner mientras se procesa el loging -->
                 <button class="btn btn-dark w-100 py-2" type="submit" :disabled="loading">
@@ -113,27 +111,27 @@
     */
 
     /*
-    * Evaluación del campo E-mail.
+    * Evaluación del dato E-mail.
     * Escucha los cambios de 'enviado' y 'email'. Si hay fallas, retorna el string con el error.
     */
 
     const emailError = computed(() => {
         if (!enviado.value) return '' // No molestamos al usuario con errores rojos apenas entra a la vista
-        if (!email.value.trim()) return 'Ingresá un E-mail.' // Validación de campo vacío
+        if (!email.value.trim()) return 'Ingresá un E-mail.' // Validación de dato vacío
         if (!emailRegex.test(email.value)) return 'Ingresá un E-mail válido.' // Validación de formato técnico
         return '' // Si pasa todos los filtros, no hay error
     })
 
     /*
     *
-    * Evaluación del campo Contraseña.
+    * Evaluación del dato Contraseña.
     * Verifica reglas mínimas de seguridad en el cliente antes de procesar el login.
     * 
     */
 
     const passwordError = computed(() => {
         if (!enviado.value) return '' // Oculto hasta que se intente el primer envío
-        if (!password.value) return 'Tu contraseña es un campo requerido.' // Validación de campo vacío
+        if (!password.value) return 'Tu contraseña es un dato requerido.' // Validación de dato vacío
         if (password.value.length < 6) return 'La contraseña debe tener al menos 6 caracteres.' // Regla mínima de Firebase
         return '' // Sin errores
     })

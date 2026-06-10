@@ -33,10 +33,14 @@
     * y es reutilizado dependiendo si muestras
     * mascotas relacionadas por Type (PetDetailView) o las mascotas destacadas (Home)
     */
-    import { usePetsStore } from '@/stores/pets.store'
+    import { usePetsStore } from '@/features/pets/stores/pets.store'
     import { Swiper, SwiperSlide } from 'swiper/vue';
     import { Autoplay, Pagination, Navigation } from 'swiper/modules'
     import PetCard from '@/features/pets/components/PetCard.vue'
+
+    /*
+    * Swiperjs Carousel
+    */
 
     import 'swiper/css';
     import 'swiper/css/pagination'
@@ -57,20 +61,20 @@
         },
         breakpoints: {
             400: {
-            slidesPerView: 1,
-            spaceBetween: 0,
+                slidesPerView: 1,
+                spaceBetween: 0,
             },
             768: {
-            slidesPerView: 2,
-            spaceBetween: 15,
+                slidesPerView: 2,
+                spaceBetween: 10,
             },
             1200: {
-            slidesPerView: 3,
-            spaceBetween: 15,
+                slidesPerView: 3,
+                spaceBetween: 10,
             },
             1440: {
-            slidesPerView: 3,
-            spaceBetween: 15,
+                slidesPerView: 3,
+                spaceBetween: 10,
             },
         },
     }
@@ -82,6 +86,19 @@
         }
     })
 
-    //const petsStore = usePetsStore()
+    /*
+    * Instancia del store global de mascotas.
+    */
+
+    const petsStore = usePetsStore()
+
+    /*
+    * Recibe el evento emitido por PetCard y delega
+    * la actualización de estado al store.
+    */
+
+    const onAdopt = (id) => {
+        petsStore.adoptPet(id)
+    }
 
 </script>

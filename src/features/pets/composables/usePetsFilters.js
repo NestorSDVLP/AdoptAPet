@@ -10,7 +10,7 @@
 
 import { computed, watch } from 'vue'
 import { useRoute, useRouter } from 'vue-router'
-import { usePetsStore } from '@/stores/pets.store'
+import { usePetsStore } from '@/features/pets/stores/pets.store'
 
 import { PET_FILTERS } from '@/features/pets/constants/constantsPetsFilters'
 
@@ -46,8 +46,6 @@ export function usePetFilters() {
     */
 
     const filters = computed(() => {
-
-        console.log('route.params', route.params)
 
         return {
             type: route.params.type || 'all',

@@ -128,7 +128,7 @@ export const usePetsStore = defineStore('pets', () => {
     * presentes en memoria.
     */
 
-    const getPet = async (slug) => {
+    /****************************************************************************const getPet = async (slug) => {
 
         const response = await fetch('/data/pets/pets.json')
 
@@ -138,6 +138,23 @@ export const usePetsStore = defineStore('pets', () => {
 
         return pets.value.find(item => item.name_slug === String(slug));
 
+    }*/
+
+    const getPet = async (slug) => {
+
+        if (!pets.value.length) {
+
+            const response = await fetch('/data/pets/pets.json')
+
+            const data = await response.json()
+
+            pets.value = data
+
+        }
+
+        return pets.value.find(
+            item => item.name_slug === String(slug)
+        )
     }
 
     /*

@@ -29,7 +29,7 @@
     * Acceso al estado global de mascotas.
     */
 
-    import { usePetsStore } from '@/stores/pets.store'
+    import { usePetsStore } from '@/features/pets/stores/pets.store'
 
     /*
     * Computed que expone el total de mascotas

@@ -11,7 +11,7 @@
                     <AppBreadcrumbs :items="breadcrumbs"/>
                 </div>
 
-                <PetDetailInfo/>
+                <PetDetailInfo :pet="pet" @adopt="onAdopt"/>
 
             </div>
         </section>
@@ -40,15 +40,13 @@
     */
 
     import { ref, onMounted, computed } from 'vue'
-    import { usePetsStore } from '@/stores/pets.store'
+    import { usePetsStore } from '@/features/pets/stores/pets.store'
     import { useRoute } from 'vue-router'
     import PetDetailInfo from '@/features/pets/components/PetDetailInfo.vue'
     import AppBreadcrumbs from '@/shared/components/AppBreadcrumbs.vue'
     import PetsRelatedCarousel from '@/features/pets/components/PetsCarousel.vue'
 
     const route = useRoute()
-
-    const petsStore = usePetsStore()
 
     /*
     * Estado reactivo que almacenará la mascota
@@ -66,6 +64,21 @@
     onMounted(async () => {
         pet.value = await petsStore.getPet(route.params.slug)
     })
+
+    /*
+    * Instancia del store global de mascotas.
+    */
+
+    const petsStore = usePetsStore()
+
+    /*
+    * Recibe el evento emitido por PetCard y delega
+    * la actualización de estado al store.
+    */
+
+    const onAdopt = (id) => {
+        petsStore.adoptPet(id)
+    }
 
     /*
     *

@@ -36,21 +36,25 @@
             <article class="clamp-4 opacity-75" v-html="petDescription"></article>
         </div>
         <div class="card-footer bg-transparent border-top-0 pb-4">
-            <div class="row g-3 align-items-center">
+            <div class="row g-sm-3 align-items-center">
                 <div class="col-lg-6">
-                    <router-link :to="{ name: 'pet', params: { slug: petNameSlug } }" class="btn-learnmore btn btn-outline-dark rounded-pill w-100">
-                        Conocer más <i class="bi bi-chevron-right"></i>
+                    <router-link :to="{ name: 'pet', params: { slug: petNameSlug } }" class="btn-learnmore btn btn-outline-dark rounded-pill px-0 w-100">
+                        Conocer más
                     </router-link>
                 </div>
                 <div class="col-lg-6">
-                    <div v-if="authStore.isAuthenticated"">
-                        <button type="button" class="btn-adopt btn btn-primary rounded-pill w-100" @click="adoptPet">
+                    
+                    <div v-if="authStore.isAuthenticated">
+                        <button type="button" class="btn-adopt btn btn-primary rounded-pill px-0 w-100" @click="adoptPet">
                             <i class="bi bi-check-circle-fill"></i>  {{ petAdopted ? 'Adoptado' : 'Adoptar' }}
                         </button>
                     </div>
+                    
                     <div v-else>
-                        <p class="small lh-sm text-center text-lg-start opacity-50 m-0">Ingresá para <h6 class="d-inline m-0">adoptar <br class="d-none d-lg-block">una mascota</h6></p>
+                        <p class="small lh-sm text-center text-lg-start opacity-75 m-0">
+                            <router-link class="h6 text-decoration-none text-dark" to="/login">Ingresá acá</router-link> para adoptar una mascota</p>
                     </div>
+
                 </div>
             </div>
         </div>

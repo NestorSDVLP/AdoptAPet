@@ -41,7 +41,7 @@
 <script setup>
 
     import { onMounted } from 'vue'
-    import { usePetsStore } from '@/stores/pets.store'
+    import { usePetsStore } from '@/features/pets/stores/pets.store'
     import PetsFeaturedCarousel from '@/features/pets/components/PetsCarousel.vue'
 
     const petsStore = usePetsStore()

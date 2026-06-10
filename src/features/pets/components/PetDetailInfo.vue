@@ -1,11 +1,3 @@
-<style scoped>
-
-/*
-* Estilos exclusivos de la vista de detalle.
-*/
-
-</style>
-
 <template>
 
     <section :id="`detailInfoPet-${pet.id}`" v-if="pet">
@@ -41,13 +33,21 @@
                 </div>
                 <article class="opacity-75 mt-4 mb-5" v-html="pet.description"></article>
 
-                <div class="row">
-                    <div class="col-8 col-sm-6 col-lg-5">
-                        <button type="button" class="btn-adopt btn btn-primary btn-lg rounded-pill w-100" @click="adoptPet">
-                            <i class="bi bi-check-circle-fill"></i> {{ adopted ? 'Adoptado' : 'Adoptar' }}
-                        </button>
+                <div v-if="authStore.isAuthenticated">
+                    <div class="row">
+                        <div class="col-8 col-sm-6 col-lg-5">
+                            <button type="button" class="btn-adopt btn btn-primary btn-lg rounded-pill w-100" @click="adoptPet">
+                                <i class="bi bi-check-circle-fill"></i> {{ pet.adopted ? 'Adoptado' : 'Adoptar' }}
+                            </button>
+                        </div>
                     </div>
                 </div>
+                
+                <div v-else>
+                    <p class="lh-sm opacity-75 m-0">
+                        <router-link class="h6 text-decoration-none text-dark" to="/login"><i class="bi bi-exclamation-circle me-1"></i> Ingresá acá</router-link> para adoptar una mascota</p>
+                </div>
+                
             </div>
         </div>
     </section>
@@ -56,49 +56,45 @@
 
 <script setup>
 
-/*
-* Dependencias utilizadas:
-*
-* - ref: estado reactivo local.
-* - onMounted: ejecuta lógica al montar el componente.
-* - useRoute: acceso a parámetros de la URL.
-* - usePetsStore: acceso al estado global de mascotas.
-*/
+    /*
+    * Dependencias utilizadas:
+    *
+    * - useAuthStore: Habilita el boton Adoptar
+    *
+    */
 
-import { ref, onMounted } from 'vue'
-import { useRoute } from 'vue-router'
-import { usePetsStore } from '@/stores/pets.store'
+    import { useAuthStore } from '@/features/auth/store/auth.store'
 
-const route = useRoute()
+    const props = defineProps({
+        pet: Object
+    })
 
-const petsStore = usePetsStore()
+    /*
+    * ******************************************************************************.
+    */
 
-/*
-* Estado reactivo que almacenará la mascota
-* obtenida desde el store.
-*/
+    const authStore = useAuthStore()
+    
+    /*
+    * Define los eventos personalizados que este componente
+    * puede emitir hacia su componente padre.
+    *
+    * En este caso se utiliza para notificar que una mascota
+    * fue seleccionada para adopción.
+    */
 
-const pet = ref(null)
+    const emit = defineEmits(['adopt'])
 
-/*
-* Al cargar el componente se obtiene el id desde
-* la URL y se consulta la información completa
-* de la mascota en el store.
-*/
+    /*
+    * Emite el evento "adopt" enviando el id de la mascota.
+    *
+    * La lógica de adopción no vive aquí.
+    * Este componente sólo informa la acción y delega
+    * la actualización del estado al componente padre.
+    */
 
-onMounted(async () => {
-    pet.value = await petsStore.getPet(route.params.slug)
-})
-
-/*
-* Marca la mascota actual como adoptada.
-*
-* La actualización del estado se realiza
-* centralmente desde Pinia.
-*/
-
-const adoptPet = () => {
-    petsStore.adoptPet(pet.value.id)
-}
+    const adoptPet = () => {
+        emit('adopt', props.pet.id)
+    }
 
 </script>

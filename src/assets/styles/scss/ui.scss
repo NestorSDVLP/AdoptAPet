@@ -1,5 +1,20 @@
 /*
 
+    Containers
+
+*/
+.container-xl,
+.container-lg,
+.container-md,
+.container-sm,
+.container {
+    @media (min-width: 1200px) {
+        max-width: 1190px;
+    }
+}
+
+/*
+
     MainHeader
 
 */
