@@ -193,6 +193,41 @@ export const usePetsStore = defineStore('pets', () => {
     }
 
     /*
+    * Cancela la adopción de una mascota.
+    */
+
+    const cancelAdoption = (id) => {
+
+        /*
+        * Busca la mascota dentro de la colección.
+        */
+
+        const pet = pets.value.find((item) => {
+
+            return item.id === id
+
+        })
+
+        /*
+        * Evita modificaciones inválidas:
+        *
+        * - mascota inexistente
+        * - mascota no adoptada
+        */
+
+        if (!pet) return
+
+        if (!pet.adopted) return
+
+        /*
+        * Actualiza el estado de adopción.
+        */
+
+        pet.adopted = false
+
+    }
+
+    /*
     * Colección de mascotas destacadas.
     *
     * Utilizada por carousel del Home.
@@ -248,6 +283,7 @@ export const usePetsStore = defineStore('pets', () => {
         getPet,
         setFilters,
         adoptPet,
+        cancelAdoption,
         featuredPets,
         adoptedPets,
         adoptedCount

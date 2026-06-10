@@ -27,6 +27,7 @@
                     :petFeatured="pet.featured"
                     :petAdopted="pet.adopted"
                     @adopt="onAdopt"
+                    @cancel-adoption="onCancelAdoption"
                 />
 
             </div>
@@ -97,6 +98,10 @@
 
     const onAdopt = (id) => {
         petsStore.adoptPet(id)
+    }
+
+    const onCancelAdoption = (id) => {
+        petsStore.cancelAdoption(id)
     }
 
 </script>

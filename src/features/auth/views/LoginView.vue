@@ -31,6 +31,7 @@
                     :class="{ 'is-invalid': emailError }"
                     id="inputEmail" 
                     placeholder="E-mail *"
+                    autocomplete="email"
                   >
                   <label for="inputEmail">E-mail *</label>
                   <div class="invalid-feedback">{{ emailError }}</div>
@@ -44,6 +45,7 @@
                     :class="{ 'is-invalid': passwordError }"
                     id="inputPassword" 
                     placeholder="Contraseña *"
+                    autocomplete="current-password"
                   >
                   <label for="inputPassword">Contraseña *</label>
                   <div class="invalid-feedback">{{ passwordError }}</div>
