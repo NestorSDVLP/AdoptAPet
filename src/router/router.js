@@ -62,7 +62,15 @@ const routes = [
 
 const router = createRouter({
     history: createWebHistory(),
-    routes
+    routes,
+    scrollBehavior(to, from, savedPosition) {
+        if (savedPosition) {
+            return savedPosition // Si toca "atrás", mantiene la posición previa
+        } else {
+            return { top: 0, behavior: 'smooth' } // Si es navegación nueva, scrollea al tope
+            // Si querés que sea fluido podés usar: return { top: 0, behavior: 'smooth' }
+        }
+    }
 })
 
 /*
@@ -86,6 +94,18 @@ router.beforeEach(async (to, from) => {
 router.afterEach(() => {
     const uiStore = useUiStore()
     uiStore.setLoading(false)
+
+    // 1. Cerrar Offcanvas: Buscamos el botón de cerrar (.btn-close) del offcanvas que esté abierto (.show) y le hacemos click
+    const activeOffcanvasCloseBtn = document.querySelector('.offcanvas.show .btn-close, .offcanvas.show [data-bs-dismiss="offcanvas"]')
+    if (activeOffcanvasCloseBtn) {
+        activeOffcanvasCloseBtn.click()
+    }
+
+    // 2. Cerrar Dropdowns (menús desplegables de mobile): Buscamos los toggles que estén abiertos y les hacemos click para colapsarlos
+    const activeDropdowns = document.querySelectorAll('.dropdown-toggle.show')
+    activeDropdowns.forEach(dropdown => {
+        dropdown.click()
+    })
 })
 
 router.onError(() => {
