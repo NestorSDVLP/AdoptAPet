@@ -8,10 +8,10 @@
           <div class="col-sm-8 col-lg-5">
             <div class="bg-primary box-shadow px-4 py-5 p-sm-5">
               
-              <div v-if="errorFirebase" class="alert alert-danger text-center mb-4 small" role="alert">
-                <i class="bi bi-exclamation-triangle-fill me-2"></i>
+              <p v-if="errorFirebase" class="alert alert-danger text-center mb-4 small " role="alert">
+                <i class="bi bi-exclamation-circle opacity-75 me-1"></i>
                 {{ errorFirebase }}
-              </div>
+              </p>
 
               <form novalidate @submit.prevent="handleLogin">
                 
@@ -189,7 +189,7 @@
 
             switch (error.code) {
                 case 'auth/invalid-credential':
-                    errorFirebase.value = 'El correo electrónico o la contraseña son incorrectos.'
+                    errorFirebase.value = 'El E-mail o la contraseña son incorrectos.'
                     break;
                 case 'auth/user-disabled':
                     errorFirebase.value = 'Esta cuenta ha sido deshabilitada por el administrador.'

@@ -49,21 +49,6 @@
                         :isAuthenticated="authStore.isAuthenticated"
                         @adopt="adoptPet"
                         @cancel-adoption="cancelAdoption"/>
-                    
-                    <!--<div v-if="authStore.isAuthenticated">
-
-                        <PetAdoptButton
-                            :adopted="petAdopted"
-                            :is-authenticated="authStore.isAuthenticated"
-                            @adopt="adoptPet"
-                            @cancel-adoption="cancelAdoption"/>
-
-                    </div>
-                    
-                    <div v-else>
-                        <p class="small lh-sm text-center text-lg-start opacity-75 m-0">
-                            <router-link class="h6 text-decoration-none text-dark" to="/login">Ingresá acá</router-link> para adoptar una mascota</p>
-                    </div>-->
 
                 </div>
             </div>
@@ -79,6 +64,13 @@
     import PetAdoptButton from '@/features/pets/components/PetAdoptButton.vue'
 
     const authStore = useAuthStore()
+
+    /*
+    * Emitir eventos al padre de:
+    *
+    * - Adopción
+    * - Cancelación de adopción
+    */
 
     const emit = defineEmits([
         'adopt',

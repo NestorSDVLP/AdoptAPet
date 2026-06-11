@@ -11,7 +11,10 @@
                     <AppBreadcrumbs :items="breadcrumbs"/>
                 </div>
 
-                <PetDetailInfo :pet="pet" @adopt="onAdopt"/>
+                <PetDetailInfo 
+                    :pet="pet" 
+                    @adopt="onAdopt(pet.id)"
+                    @cancel-adoption="onCancelAdoption(pet.id)"/>
 
             </div>
         </section>
@@ -76,8 +79,12 @@
     * la actualización de estado al store.
     */
 
-    const onAdopt = (id) => {
+    const onAdopt = (id) => {+
         petsStore.adoptPet(id)
+    }
+
+    const onCancelAdoption = (id) => {
+        petsStore.cancelAdoption(id)
     }
 
     /*

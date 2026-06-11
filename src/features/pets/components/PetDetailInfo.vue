@@ -33,19 +33,16 @@
                 </div>
                 <article class="opacity-75 mt-4 mb-5" v-html="pet.description"></article>
 
-                <div v-if="authStore.isAuthenticated">
-                    <div class="row">
-                        <div class="col-8 col-sm-6 col-lg-5">
-                            <button type="button" class="btn-adopt btn btn-primary btn-lg rounded-pill w-100" @click="adoptPet">
-                                <i class="bi bi-check-circle-fill"></i> {{ pet.adopted ? 'Adoptado' : 'Adoptar' }}
-                            </button>
-                        </div>
+                <div class="row">
+                    <div class="col-8 col-sm-6 col-lg-5">
+                        
+                        <PetAdoptButton
+                            :adopted="pet.adopted"
+                            :isAuthenticated="authStore.isAuthenticated"
+                            @adopt="adoptPet"
+                            @cancel-adoption="cancelAdoption"/>
+
                     </div>
-                </div>
-                
-                <div v-else>
-                    <p class="lh-sm opacity-75 m-0">
-                        <router-link class="h6 text-decoration-none text-dark" to="/login"><i class="bi bi-exclamation-circle me-1"></i> Ingresá acá</router-link> para adoptar una mascota</p>
                 </div>
                 
             </div>
@@ -65,6 +62,8 @@
 
     import { useAuthStore } from '@/features/auth/store/auth.store'
 
+    import PetAdoptButton from '@/features/pets/components/PetAdoptButton.vue'
+
     const props = defineProps({
         pet: Object
     })
@@ -75,26 +74,24 @@
 
     const authStore = useAuthStore()
     
-    /*
-    * Define los eventos personalizados que este componente
-    * puede emitir hacia su componente padre.
+     /*
+    * Emitir eventos al padre de:
     *
-    * En este caso se utiliza para notificar que una mascota
-    * fue seleccionada para adopción.
+    * - Adopción
+    * - Cancelación de adopción
     */
 
-    const emit = defineEmits(['adopt'])
-
-    /*
-    * Emite el evento "adopt" enviando el id de la mascota.
-    *
-    * La lógica de adopción no vive aquí.
-    * Este componente sólo informa la acción y delega
-    * la actualización del estado al componente padre.
-    */
+    const emit = defineEmits([
+        'adopt',
+        'cancel-adoption'
+    ])
 
     const adoptPet = () => {
-        emit('adopt', props.pet.id)
+        emit('adopt', props.id)
+    }
+
+    const cancelAdoption = () => {
+        emit('cancel-adoption', props.id)
     }
 
 </script>

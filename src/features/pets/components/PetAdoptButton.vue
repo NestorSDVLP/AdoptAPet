@@ -5,22 +5,24 @@
         <button
             v-if="!props.adopted"
             class="btn btn-primary rounded-pill w-100"
+            title="Adoptar mascota"
             @click="emit('adopt')">
-                Adoptar
+                <i class="bi bi-check-circle opacity-75"></i> Adoptar
         </button>
 
         <button
             v-else
             class="btn btn-outline-danger rounded-pill w-100"
+            title="Cancelar adopción"
             @click="emit('cancel-adoption')">
-                Cancelar adopción
+                <i class="bi bi-x-circle opacity-75"></i>  Cancelar
         </button>
 
     </div>
 
     <div v-else>
 
-        <router-link to="/login">
+        <router-link to="/login" class="btn-link text-dark text-decoration-none h6 m-0">
             Ingresá para adoptar
         </router-link>
 
