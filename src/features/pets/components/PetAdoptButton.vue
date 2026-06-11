@@ -5,6 +5,7 @@
         <button
             v-if="!props.adopted"
             class="btn btn-primary rounded-pill w-100"
+            :class="props.customClass"
             title="Adoptar mascota"
             @click="emit('adopt')">
                 <i class="bi bi-check-circle opacity-75"></i> Adoptar
@@ -13,6 +14,7 @@
         <button
             v-else
             class="btn btn-outline-danger rounded-pill w-100"
+            :class="props.customClass"
             title="Cancelar adopción"
             @click="emit('cancel-adoption')">
                 <i class="bi bi-x-circle opacity-75"></i>  Cancelar
@@ -41,7 +43,11 @@
 
     const props = defineProps({
         adopted: Boolean,
-        isAuthenticated: Boolean
+        isAuthenticated: Boolean,
+        customClass: {
+            type: String,
+            default: ''
+        }
 
     })
 

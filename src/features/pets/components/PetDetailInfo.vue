@@ -39,6 +39,7 @@
                         <PetAdoptButton
                             :adopted="pet.adopted"
                             :isAuthenticated="authStore.isAuthenticated"
+                            :customClass="'btn-lg'"
                             @adopt="adoptPet"
                             @cancel-adoption="cancelAdoption"/>
 

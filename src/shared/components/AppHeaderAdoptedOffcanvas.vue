@@ -27,30 +27,53 @@
                 <p class="opacity-75 mb-4">Haciendo click en cualquier mascota de la lista <strong>vas a poder acceder a sus datos.</strong></p>
 
                 <div class="list-group">
-                    <div v-for="pet in petsStore.adoptedPets" :key="pet.id" class="list-group-item list-group-item-action p-0">
-                        <router-link :to="{ name: 'pet', params: { slug: pet.name_slug } }" class="text-decoration-none text-dark">
-                            <div class="row align-items-center">
-                                <div class="col-5">
-                                    <img :src="pet.thumb" class="w-100" :alt="pet.name">
-                                </div>
-                                <div class="col-7">
-                                    <small class="opacity-50">{{ pet.type }}</small>
-                                    <h4 class="h5 mb-0">{{ pet.name }}</h4>
 
-                                    <div class="row">
-                                        <div class="col-6">
-                                            <small class="opacity-50">Sexo:</small>
-                                            <p class="small">{{ pet.gender }}</p>
-                                        </div>
-                                        <div class="col-6">
-                                            <small class="opacity-50">Edad:</small>
-                                            <p class="small">{{ pet.age }} <sup>{{ pet.age_unit }}</sup></p>
-                                        </div>
+                    <div v-for="pet in petsStore.adoptedPets" :key="pet.id" class="list-group-item border-top rounded-0 box-shadow mb-2 p-0">
+                        
+                        <div class="row align-items-center">
+                            <div class="col-5">
+                                <img :src="pet.thumb" class="w-100" :alt="pet.name">
+                            </div>
+                            <div class="col-7">
+                                <small class="small opacity-50">{{ pet.type }}</small>
+                                <h4 class="h5 mb-0">{{ pet.name }}</h4>
+
+                                <div class="row">
+                                    <div class="col-6">
+                                        <small class="small opacity-50">Sexo:</small>
+                                        <p class="small m-0">{{ pet.gender }}</p>
+                                    </div>
+                                    <div class="col-6">
+                                        <small class="small opacity-50">Edad:</small>
+                                        <p class="small m-0">{{ pet.age }} <sup>{{ pet.age_unit }}</sup></p>
                                     </div>
                                 </div>
                             </div>
-                        </router-link>
+                        </div>
+                        <div class="py-2 px-2 border-top">
+                            <div class="row g-2">
+                                <div class="col-6">
+
+                                    <router-link :to="{ name: 'pet', params: { slug: pet.name_slug } }" class="btn-learnmore btn btn-outline-dark btn-sm rounded-pill w-100">
+                                        Conocer más
+                                    </router-link>
+
+                                </div>
+                                <div class="col-6">
+
+                                    <PetAdoptButton
+                                        :adopted="pet.adopted"
+                                        :isAuthenticated="authStore.isAuthenticated"
+                                        :customClass = "'btn-sm'"
+                                        @adopt="onAdopt(pet.id)"
+                                        @cancel-adoption="onCancelAdoption(pet.id)"/>
+
+                                </div>
+                            </div>
+                        </div>
+
                     </div>
+
                 </div>
 
             </div>
@@ -69,6 +92,29 @@
 
     import { usePetsStore } from '@/features/pets/stores/pets.store'
 
+    import { useAuthStore } from '@/features/auth/store/auth.store'
+
+    const authStore = useAuthStore()
+
+    import PetAdoptButton from '@/features/pets/components/PetAdoptButton.vue'
+
+    /*
+    * Instancia del store global de mascotas.
+    */
+
     const petsStore = usePetsStore()
+
+    /*
+    * Recibe el evento emitido por PetCard y delega
+    * la actualización de estado al store.
+    */
+
+    const onAdopt = (id) => {+
+        petsStore.adoptPet(id)
+    }
+
+    const onCancelAdoption = (id) => {
+        petsStore.cancelAdoption(id)
+    }
 
 </script>
