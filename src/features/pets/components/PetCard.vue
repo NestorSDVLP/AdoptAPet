@@ -36,7 +36,7 @@
             <article class="clamp-4 opacity-75" v-html="petDescription"></article>
         </div>
         <div class="card-footer bg-transparent border-top-0 pb-4">
-            <div class="row g-sm-3 align-items-center">
+            <div class="row g-3 align-items-center">
                 <div class="col-lg-6">
                     
                     <router-link :to="{ name: 'pet', params: { slug: petNameSlug } }" class="btn-learnmore btn btn-outline-dark rounded-pill w-100">
@@ -44,7 +44,7 @@
                     </router-link>
 
                 </div>
-                <div class="col-lg-6">
+                <div class="col-lg-6 text-center">
 
                     <PetAdoptButton
                         :adopted="petAdopted"

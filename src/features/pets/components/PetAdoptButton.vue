@@ -24,9 +24,11 @@
 
     <div v-else>
 
-        <router-link to="/login" class="btn-link text-dark text-decoration-none h6 m-0">
-            Ingresá para adoptar
-        </router-link>
+        <div class="text-center text-lg-start">
+            <router-link to="/login" class="btn-link text-dark text-decoration-none h6 m-0">
+                Ingresá para adoptar
+            </router-link>
+        </div>
 
     </div>
 
