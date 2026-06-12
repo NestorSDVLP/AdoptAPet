@@ -34,7 +34,7 @@
                 <article class="opacity-75 mt-4 mb-5" v-html="pet.description"></article>
 
                 <div class="row">
-                    <div class="col-8 col-sm-6 col-lg-5">
+                    <div class="col-sm-6 col-lg-5">
                         
                         <PetAdoptButton
                             :adopted="pet.adopted"
