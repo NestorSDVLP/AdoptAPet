@@ -13,6 +13,7 @@ import HomeView from '@/features/home/views/HomeView.vue'
 import PetsView from '@/features/pets/views/PetsView.vue'
 import PetDetailView from '@/features/pets/views/PetDetailView.vue'
 import LoginView from '@/features/auth/views/LoginView.vue'
+import NotFoundView from '@/features/404/views/404.vue'
 
 /*
 * Definición del mapa de navegación.
@@ -51,6 +52,12 @@ const routes = [
         name: 'login',
         component: LoginView
     },
+    // Esta ruta tiene que ir ÚLTIMA SIÉMPRE:
+    {
+        path: '/:pathMatch(.*)*',
+        name: 'NotFound',
+        component: NotFoundView
+    }
 
 ]
 
